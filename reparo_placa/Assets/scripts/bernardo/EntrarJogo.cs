@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
 public class EntrarJogo : MonoBehaviour
 {
     
@@ -24,6 +25,6 @@ public class EntrarJogo : MonoBehaviour
         PlayerPrefs.SetString("NomeDoUsuario", nome);
         PlayerPrefs.Save();
         //Debug.Log("Nome salvo: " + nome);
-        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("TelaUsuario");
     }
 }
