@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TelaUsuario.unity
     guid: fe88849fc4df3944bba4722b41d51cc6
+  - enabled: 1
+    path: Assets/Scenes/EscolhaPersonagem.unity
+    guid: d5ce521e39731844db51b06f7a69903b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
