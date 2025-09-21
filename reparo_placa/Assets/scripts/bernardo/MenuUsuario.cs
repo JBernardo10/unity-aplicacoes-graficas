@@ -17,7 +17,7 @@ public class MenuUsuario : MonoBehaviour
     }
     public void Jogar()
     {
-        //SceneManager.LoadScene("Fases");
+        SceneManager.LoadScene("MenuFases");
     }
     public void AbrirCreditos()
     {

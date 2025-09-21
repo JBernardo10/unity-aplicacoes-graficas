@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscolhaPersonagem.unity
     guid: d5ce521e39731844db51b06f7a69903b
+  - enabled: 1
+    path: Assets/Scenes/MenuFases.unity
+    guid: fdf3a87c42372a84d9a3479e671095e1
+  - enabled: 1
+    path: Assets/Scenes/TutorialReparoPlaca.unity
+    guid: 8e91aeca426b67d4794567916bc0ec4a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

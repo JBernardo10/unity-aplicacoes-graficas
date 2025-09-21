@@ -209,7 +209,6 @@ GameObject:
   - component: {fileID: 102147012}
   - component: {fileID: 102147011}
   - component: {fileID: 102147010}
-  - component: {fileID: 102147013}
   m_Layer: 5
   m_Name: fecharButton
   m_TagString: Untagged
@@ -280,7 +279,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102147013}
+      - m_Target: {fileID: 946446169}
         m_TargetAssemblyTypeName: MenuUsuario, Assembly-CSharp
         m_MethodName: FecharCreditos
         m_Mode: 1
@@ -330,20 +329,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102147008}
   m_CullTransparentMesh: 1
---- !u!114 &102147013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 102147008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff43e6bcaa9efa741821bc985f91a9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PainelCreditos: {fileID: 908424228}
-  painelMenuPrincipal: {fileID: 946446167}
 --- !u!1 &232449820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 946446168}
+  - component: {fileID: 946446169}
   m_Layer: 5
   m_Name: Menuprincipal
   m_TagString: Untagged
@@ -1457,6 +1443,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &946446169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946446167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff43e6bcaa9efa741821bc985f91a9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PainelCreditos: {fileID: 908424228}
+  painelMenuPrincipal: {fileID: 946446167}
 --- !u!1 &1130249937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1868,6 @@ GameObject:
   - component: {fileID: 1212847369}
   - component: {fileID: 1212847368}
   - component: {fileID: 1212847367}
-  - component: {fileID: 1212847370}
   m_Layer: 5
   m_Name: JogarButton
   m_TagString: Untagged
@@ -1940,7 +1939,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212847370}
+      - m_Target: {fileID: 946446169}
         m_TargetAssemblyTypeName: MenuUsuario, Assembly-CSharp
         m_MethodName: Jogar
         m_Mode: 1
@@ -1990,20 +1989,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212847365}
   m_CullTransparentMesh: 1
---- !u!114 &1212847370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212847365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff43e6bcaa9efa741821bc985f91a9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PainelCreditos: {fileID: 0}
-  painelMenuPrincipal: {fileID: 0}
 --- !u!1 &1291634559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,7 +2670,6 @@ GameObject:
   - component: {fileID: 1851795558}
   - component: {fileID: 1851795557}
   - component: {fileID: 1851795556}
-  - component: {fileID: 1851795559}
   m_Layer: 5
   m_Name: CreditosButton
   m_TagString: Untagged
@@ -2757,7 +2741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1851795559}
+      - m_Target: {fileID: 946446169}
         m_TargetAssemblyTypeName: MenuUsuario, Assembly-CSharp
         m_MethodName: AbrirCreditos
         m_Mode: 1
@@ -2807,20 +2791,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851795554}
   m_CullTransparentMesh: 1
---- !u!114 &1851795559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851795554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff43e6bcaa9efa741821bc985f91a9c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PainelCreditos: {fileID: 908424228}
-  painelMenuPrincipal: {fileID: 946446167}
 --- !u!1 &2096207760
 GameObject:
   m_ObjectHideFlags: 0
