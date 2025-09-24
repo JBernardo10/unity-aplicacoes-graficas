@@ -31,7 +31,7 @@ public class MenuUsuario : MonoBehaviour
     }
     public void Configuracao()
     {
-        //aaa
+        SceneManager.LoadScene("TelaConfiguracao");
     }
 
     public void Sons()
