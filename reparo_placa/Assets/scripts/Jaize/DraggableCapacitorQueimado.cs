@@ -44,6 +44,12 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 pinca = eventData.pointerDrag.transform;
                 transform.SetParent(pinca);
                 transform.localPosition = Vector3.zero;
+
+            }
+            else
+            {
+                processo = StartCoroutine(ProcessarFerramenta("Ferramenta errada!", 1f, Estado.PresoNaPlaca, "Utilize o ferro de solda"));
+
             }
         }
     }
@@ -57,7 +63,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
             processo = null;
         }
 
-        if (PainelCampoTexto != null)
+        if (PainelCampoTexto != null && estado != Estado.PresoNaPinca)
             PainelCampoTexto.SetActive(false); // esconde o painel ao sair
     }
 
@@ -71,7 +77,15 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
         float elapsed = 0f;
         while (elapsed < tempo && dentro)
         {
-            mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
+            if (tempo == 1f)
+            {
+                mensagemUI.text = msgDurante;
+            }
+            else
+            {
+                mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
+            }
+
             if (PainelCampoTexto != null)
                 PainelCampoTexto.SetActive(true);
             elapsed += Time.deltaTime;
@@ -97,4 +111,5 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
             Destroy(gameObject);
         }
     }
+    
 }
