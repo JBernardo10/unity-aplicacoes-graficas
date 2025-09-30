@@ -822,7 +822,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278255386
-  m_fontColor: {r: 0.10193372, g: 1, b: 0, a: 1}
+  m_fontColor: {r: 0.8156863, g: 0.1254902, b: 0.5647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1378,6 +1378,7 @@ GameObject:
   - component: {fileID: 593071323}
   - component: {fileID: 593071322}
   - component: {fileID: 593071321}
+  - component: {fileID: 593071324}
   m_Layer: 5
   m_Name: ButtonVoltar
   m_TagString: Untagged
@@ -1403,7 +1404,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 355.0001, y: 148}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593071321
 MonoBehaviour:
@@ -1448,7 +1449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 593071322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593071324}
+        m_TargetAssemblyTypeName: TutorialFaseReparo, Assembly-CSharp
+        m_MethodName: VoltarTutorialFaseReparo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &593071322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1487,6 +1500,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593071319}
   m_CullTransparentMesh: 1
+--- !u!114 &593071324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593071319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08eaf4eef3eb724394dbd1670eee3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &616839657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,7 +2260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9, y: -21}
+  m_AnchoredPosition: {x: -9, y: -27}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886493566
@@ -2450,7 +2475,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 356, y: -150}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 65, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1051970474
 BoxCollider2D:

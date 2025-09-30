@@ -14,4 +14,12 @@ public class TutorialFaseReparo : MonoBehaviour
     {
         SceneManager.LoadScene("MenuFases");
     }
+
+    public void VoltarTutorialFaseReparo()
+    {
+
+        SceneManager.LoadScene("TutorialReparoPlaca");
+        Screen.orientation = ScreenOrientation.Portrait;
+        
+    }
 }

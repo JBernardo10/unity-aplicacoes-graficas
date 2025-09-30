@@ -101,7 +101,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             processo = StartCoroutine(ProcessarFerramenta(
                 "Soldando capacitor...", tempoFerro,
                 Estado.Soldado,
-                "Capacitor inserido com sucesso na placa mãe!"
+                "Capacitor soldado com sucesso na placa mãe!"
             ));
         }
     }

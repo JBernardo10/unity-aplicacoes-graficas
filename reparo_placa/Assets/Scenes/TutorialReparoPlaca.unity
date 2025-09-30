@@ -880,7 +880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -355}
+  m_AnchoredPosition: {x: 0, y: -384}
   m_SizeDelta: {x: 700, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204479264
@@ -903,7 +903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8300904134739043141, guid: e05a8b3737f104f469477b8c33a05971, type: 3}
+  m_Sprite: {fileID: -3776417544458684064, guid: 195d87018379e3248aa79cbe5443a4a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -957,7 +957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: 730}
+  m_AnchoredPosition: {x: -307, y: 766}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359699742
@@ -1090,7 +1090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -684}
+  m_AnchoredPosition: {x: 0, y: -720}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063786867
@@ -1221,7 +1221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: 394}
+  m_AnchoredPosition: {x: -14, y: 423}
   m_SizeDelta: {x: 634, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074623270
@@ -1244,11 +1244,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Problema Detectado!\nO computador n\xE3o est\xE1 funcionando corretamente
-    porque a placa-m\xE3e n\xE3o apresenta todos os componentes adequados. Foi identificado
-    slots vazios onde deveriam estar instalado capacitores, o que impede o funcionamento
-    normal do sistema.\nO que fazer?\nLocalize o espa\xE7o vazio na placa-m\xE3e
-    reservado para o capacitor.\nArraste o capacitor at\xE9 o slot vazio e encaixe-o\_corretamente."
+  m_text: "Problema Detectado!\nO computador est\xE1 com falha porque a placa-m\xE3e
+    possui capacitores queimados, o que afeta o funcionamento do sistema.\r\n\nO
+    que fazer?\n1-Identifique os capacitores danificados na placa e os araste para
+    a lixeira.\n2-Remova-os com:\nFerro de solda (para aquecer a solda),\nSugador
+    de solda (para limpar os pontos),\nPin\xE7a (para retirar o capacitor).\n3-Escolha
+    um capacitor novo\n4-Instale-o com:\nEstanho (para fixa-lo na placa),\nFerro
+    de solda (para soldar corretamente).\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
@@ -1275,8 +1277,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 29
+  m_fontSizeBase: 29
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
