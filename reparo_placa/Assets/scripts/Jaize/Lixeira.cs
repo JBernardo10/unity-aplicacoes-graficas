@@ -8,7 +8,7 @@ public class Lixeira : MonoBehaviour, IDropHandler
     public float tempoDescarte = 1f;
     public GameObject painelMensagem; // arraste o painel do Canvas
     public TMP_Text mensagemUI;       // arraste o Text que está dentro do painel
-
+    public GameObject audioCapacitorQLixeira;
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -17,6 +17,9 @@ public class Lixeira : MonoBehaviour, IDropHandler
 
             if (capacitor != null)
             {
+                GameObject preFab = Instantiate(audioCapacitorQLixeira, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+                Destroy(preFab.gameObject, 2f);
+
                 capacitor.Descartar();
                 StartCoroutine(MostrarMensagem("objeto descartado!"));
             }

@@ -8,8 +8,10 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
 {
     public TMP_Text mensagemUI; // arraste o Text do Canvas
     public float tempoFerro = 2f;
+    public GameObject audioFerroSolda, audioSugadorSolda, audioPinca;
     public float tempoSugador = 2f;
     [SerializeField] private GameObject PainelCampoTexto;
+    
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, ProntoParaPinca, PresoNaPinca }
     private Estado estado = Estado.PresoNaPlaca;
@@ -30,13 +32,25 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 PainelCampoTexto.SetActive(true); // mostra o painel
 
             if (estado == Estado.PresoNaPlaca && ferramentaAtual == "FerroSolda")
+            {
+                GameObject preFab = Instantiate(audioFerroSolda, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+                Destroy(preFab.gameObject, 2f);
+
                 processo = StartCoroutine(ProcessarFerramenta("Aquecendo solda...", tempoFerro, Estado.FerroAquecido, "Solda aquecida! Use o sugador."));
 
+            }
             else if (estado == Estado.FerroAquecido && ferramentaAtual == "Sugador")
-                processo = StartCoroutine(ProcessarFerramenta("Removendo solda...", tempoSugador, Estado.Sugado, "Solda removida! Use a pinça."));
+            {
+                GameObject preFab = Instantiate(audioSugadorSolda, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+                Destroy(preFab.gameObject, 2f);
 
+                processo = StartCoroutine(ProcessarFerramenta("Removendo solda...", tempoSugador, Estado.Sugado, "Solda removida! Use a pinça."));
+            }
             else if (estado == Estado.Sugado && ferramentaAtual == "Pinca")
             {
+                GameObject preFab = Instantiate(audioPinca, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+                Destroy(preFab.gameObject, 2f);
+
                 mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
                 if (PainelCampoTexto != null)
                     PainelCampoTexto.SetActive(true);

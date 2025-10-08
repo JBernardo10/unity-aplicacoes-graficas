@@ -143,6 +143,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mensagemUI: {fileID: 248775341}
   tempoFerro: 2
+  audioFerroSolda: {fileID: 2059189090416846180, guid: 40283b3fa0e50324c89393bb1b1b04f5, type: 3}
+  audioSugadorSolda: {fileID: 7843104121017849733, guid: 2ffe6b96a565f604188bf87388fd2736, type: 3}
+  audioPinca: {fileID: 3433739610097079547, guid: 3d88750612d31234aa1316b49d02d748, type: 3}
   tempoSugador: 2
   PainelCampoTexto: {fileID: 84187340}
 --- !u!50 &2122669
@@ -2565,6 +2568,7 @@ MonoBehaviour:
   tempoDescarte: 1
   painelMensagem: {fileID: 84187340}
   mensagemUI: {fileID: 248775341}
+  audioCapacitorQLixeira: {fileID: 2342134380683032778, guid: c8075ef836d43b54fbeaad34cce3ae57, type: 3}
 --- !u!114 &1051970477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,6 +2958,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mensagemUI: {fileID: 248775341}
   tempoFerro: 2
+  audioFerroSolda: {fileID: 2059189090416846180, guid: 40283b3fa0e50324c89393bb1b1b04f5, type: 3}
+  audioSugadorSolda: {fileID: 7843104121017849733, guid: 2ffe6b96a565f604188bf87388fd2736, type: 3}
+  audioPinca: {fileID: 3433739610097079547, guid: 3d88750612d31234aa1316b49d02d748, type: 3}
   tempoSugador: 2
   PainelCampoTexto: {fileID: 84187340}
 --- !u!50 &1562555243
