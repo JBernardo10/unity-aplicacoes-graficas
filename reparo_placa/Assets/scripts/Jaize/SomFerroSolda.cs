@@ -11,16 +11,16 @@ public class SomFerroSolda : MonoBehaviour
         // verifica se esta ferramenta está ativa
         if (ferramentaAtiva == nomeFerramenta)
         {
-            // se o botão esquerdo do mouse for pressionado, tocar o som
-            if (Input.GetMouseButtonDown(0))
+            // enquanto o botão esquerdo do mouse estiver pressionado, tocar o som
+            if (Input.GetMouseButton(0))
             {
-                somSolda.Play();
+                if (!somSolda.isPlaying)
+                    somSolda.Play();
             }
-
-            // se o botão esquerdo do mouse for solto, parar o som
-            if (Input.GetMouseButtonUp(0))
+            else
             {
-                somSolda.Stop();
+                if (somSolda.isPlaying)
+                    somSolda.Stop();
             }
         }
         else
