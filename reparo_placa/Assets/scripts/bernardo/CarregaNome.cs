@@ -9,7 +9,9 @@ public class CarregaNome : MonoBehaviour
     public TMP_Text textoNome;
     public Image avatar;
     void Start()
-    {
+    {   PlayerPrefs.SetString("CenaAnterior", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
+
         string nome = PlayerPrefs.GetString("NomeDoUsuario");
         textoNome.text = nome;
         //Debug.Log("Nome recuperdo: " + nome); 

@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 227d5b2a34157184e8233343f5740d64
+guid: 491f3c21f37665b4ea781e6daaeea7b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2023476691327924090
-    second: som_0
-  - first:
-      213: -1284425109102864741
-    second: som_1
-  - first:
-      213: -2377077095879989893
-    second: som_2
-  - first:
-      213: -5214973172417340840
-    second: som_3
+      213: 4527416731224438602
+    second: mudo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -135,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: som_0
+      name: mudo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,37 +134,15 @@ TextureImporter:
         width: 93
         height: 173
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7732e57455d41c10800000000000000
-      internalID: 2023476691327924090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: som_1
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 0
-        width: 107
-        height: 173
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b96d45f1b2ecc2ee0800000000000000
-      internalID: -1284425109102864741
+      spriteID: a47face978d94de30800000000000000
+      internalID: 4527416731224438602
       vertices: []
       indices: 
       edges: []
@@ -192,10 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      som_0: 2023476691327924090
-      som_1: -1284425109102864741
-      som_2: -2377077095879989893
-      som_3: -5214973172417340840
+      mudo_0: 4527416731224438602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

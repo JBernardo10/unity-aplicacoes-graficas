@@ -61,6 +61,9 @@ public class AlteraPersonagem : MonoBehaviour
 
     public void Voltar()
     {
-        SceneManager.LoadScene("TelaUsuario");
+        string cenaAnterior = PlayerPrefs.GetString("CenaAnterior", "TelaUsuario"); // valor padrão se não existir
+        SceneManager.LoadScene(cenaAnterior);
+
+        //SceneManager.LoadScene("TelaUsuario");
     }
 }
