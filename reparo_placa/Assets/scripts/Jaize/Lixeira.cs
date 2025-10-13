@@ -5,10 +5,16 @@ using System.Collections;
 
 public class Lixeira : MonoBehaviour, IDropHandler
 {
-    public float tempoDescarte = 1f;
     public GameObject painelMensagem; // arraste o painel do Canvas
     public TMP_Text mensagemUI;       // arraste o Text que está dentro do painel
     public GameObject audioCapacitorQLixeira;
+
+    [Header("Controle de descarte")]
+    public int totalDeCapacitoresQueimados = 2; // defina quantos precisam ser descartados
+    private int capacitoresDescartados = 0;
+
+    public float tempoMensagem = 6f; // tempo que cada mensagem ficará visível
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -17,23 +23,53 @@ public class Lixeira : MonoBehaviour, IDropHandler
 
             if (capacitor != null)
             {
-                GameObject preFab = Instantiate(audioCapacitorQLixeira, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
+                GameObject preFab = Instantiate(audioCapacitorQLixeira, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
                 capacitor.Descartar();
-                StartCoroutine(MostrarMensagem("objeto descartado!"));
+                capacitoresDescartados++;
+
+                if (capacitoresDescartados >= totalDeCapacitoresQueimados)
+                {
+                    // Mostra primeiro "Objeto descartado!", depois "Adicione os capacitores bons."
+                    StopAllCoroutines();
+                    StartCoroutine(MostrarMensagensSequenciais());
+                }
+                else
+                {
+                    MostrarMensagem("Objeto descartado!");
+                }
             }
         }
     }
 
-    private IEnumerator MostrarMensagem(string mensagem)
+    private void MostrarMensagem(string mensagem)
     {
-        painelMensagem.SetActive(true);  // mostra o painel
+        StopAllCoroutines();
+        StartCoroutine(MostrarMensagemTempo(mensagem, tempoMensagem));
+    }
+
+    private IEnumerator MostrarMensagemTempo(string mensagem, float tempo)
+    {
+        painelMensagem.SetActive(true);
         mensagemUI.text = mensagem;
 
-        yield return new WaitForSeconds(tempoDescarte);
+        yield return new WaitForSeconds(tempo);
 
-        painelMensagem.SetActive(false); // esconde painel + texto
-        
+        painelMensagem.SetActive(false);
+    }
+
+    private IEnumerator MostrarMensagensSequenciais()
+    {
+        // Mensagem 1
+        painelMensagem.SetActive(true);
+        mensagemUI.text = "Objeto descartado!";
+        yield return new WaitForSeconds(tempoMensagem);
+
+        // Mensagem 2
+        mensagemUI.text = "Adicione os capacitores bons.";
+        yield return new WaitForSeconds(tempoMensagem);
+
+        painelMensagem.SetActive(false);
     }
 }
