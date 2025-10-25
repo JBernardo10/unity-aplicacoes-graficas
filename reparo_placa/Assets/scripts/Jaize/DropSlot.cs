@@ -55,7 +55,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             ImagemCampoTexto2.SetActive(true);
            
             CancelInvoke(nameof(EsconderCampo));
-            Invoke(nameof(EsconderCampo), 1.5f);
+            Invoke(nameof(EsconderCampo), 5f);
             MostrarFeedback(true);
             // Travar o slot para não repetir
             preenchido = true;
