@@ -839,7 +839,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559119167}
+        m_TargetAssemblyTypeName: ControleConfig, Assembly-CSharp
+        m_MethodName: AtualizarVolumeGeral
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &341830652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,10 +1387,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnSons: {fileID: 1172246190}
   btnControles: {fileID: 89654574}
-  corAtiva: {r: 0, g: 0.60784316, b: 1, a: 1}
-  corInativa: {r: 0.6226415, g: 0.5674261, b: 0.5674261, a: 1}
+  corAtiva: {r: 0, g: 0, b: 1, a: 1}
+  corInativa: {r: 1, g: 1, b: 1, a: 1}
   PainelSons: {fileID: 1691906258}
   PainelContls: {fileID: 1482215891}
+  sliderVolumeMusica: {fileID: 1322980669}
+  sliderEfeitoSonoro: {fileID: 1534823315}
+  sliderVolumeGeral: {fileID: 316358106}
 --- !u!1 &593639117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,7 +2830,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559119167}
+        m_TargetAssemblyTypeName: ControleConfig, Assembly-CSharp
+        m_MethodName: AtualizarVolumeMusica
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1361318673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,7 +2894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1482215892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3113,7 +3140,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559119167}
+        m_TargetAssemblyTypeName: ControleConfig, Assembly-CSharp
+        m_MethodName: AtualizarVolumeEfeitoSonoro
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1662942128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,6 +3392,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PainelCreditos: {fileID: 0}
   painelMenuPrincipal: {fileID: 0}
+  som_ativo: {fileID: 0}
+  som_mudo: {fileID: 0}
+  Som: {fileID: 0}
 --- !u!114 &1852422456
 MonoBehaviour:
   m_ObjectHideFlags: 0

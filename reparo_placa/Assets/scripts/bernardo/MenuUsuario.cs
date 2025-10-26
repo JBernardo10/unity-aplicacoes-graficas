@@ -19,9 +19,27 @@ public class MenuUsuario : MonoBehaviour
 
     void Start()
     {
-    bool somLigado = PlayerPrefs.GetInt("SomLigado", 1) == 1;
-    Som.sprite = somLigado ? som_ativo : som_mudo;
-    AudioListener.volume = somLigado ? 1f : 0f;
+        int somValor = PlayerPrefs.GetInt("SomLigado", 1);
+        bool somLigado;
+
+        if (somValor == 1)
+        {
+            somLigado = true;
+        }
+        else
+        {
+            somLigado = false;
+        }
+
+        if (somLigado)
+        {
+            Som.sprite = som_ativo;
+        }
+        else
+        {
+            Som.sprite = som_mudo;
+        }
+
     }
     public void TelaInicial()
     {
@@ -43,32 +61,54 @@ public class MenuUsuario : MonoBehaviour
     }
     public void Configuracao()
     {
+        PlayerPrefs.SetString("CenaAnterior", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
+        Debug.Log(PlayerPrefs.GetString("CenaAnterior"));
         SceneManager.LoadScene("TelaConfiguracao");
     }
 
     public void Sons()
     {
-// Recupera o estado atual do som (1 = ligado, 0 = desligado)
-        int somValor = PlayerPrefs.GetInt("SomLigado", 1); // 1 como padrão
+        int somValor = PlayerPrefs.GetInt("SomLigado", 1);
+        bool somLigado;
 
-        // Inverte o estado
-        bool somLigado = somValor == 1 ? false : true;
+        if (somValor == 1)
+        {
+            somLigado = true;
+            PlayerPrefs.SetInt("SomLigado", 0);
+        }
+        else
+        {
+            somLigado = false;
+            PlayerPrefs.SetInt("SomLigado", 1);
+        }
 
-        // Salva o novo estado
-        PlayerPrefs.SetInt("SomLigado", somLigado ? 1 : 0);
         PlayerPrefs.Save();
 
-        // Atualiza o sprite e o volume
-        if (somLigado)
+        if (!somLigado)
         {
             Som.sprite = som_ativo;
-            AudioListener.volume = 1f;
         }
         else
         {
             Som.sprite = som_mudo;
-            AudioListener.volume = 0f;
         }
 
+        GameObject musicaGO = GameObject.Find("Musica Fundo");
+        if (musicaGO != null)
+        {
+            AudioSource audio = musicaGO.GetComponent<AudioSource>();
+            if (audio != null)
+            {
+                if (!somLigado)
+                {
+                    audio.mute = false;
+                }
+                else
+                {
+                    audio.mute = true;
+                }
+            }
+        }
     }
 }

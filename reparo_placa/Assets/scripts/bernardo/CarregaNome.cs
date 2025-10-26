@@ -9,8 +9,7 @@ public class CarregaNome : MonoBehaviour
     public TMP_Text textoNome;
     public Image avatar;
     void Start()
-    {   PlayerPrefs.SetString("CenaAnterior", SceneManager.GetActiveScene().name);
-        PlayerPrefs.Save();
+    {  
 
         string nome = PlayerPrefs.GetString("NomeDoUsuario");
         textoNome.text = nome;
@@ -28,7 +27,11 @@ public class CarregaNome : MonoBehaviour
     }
     public void AlteraPersonagem()
     {
+        PlayerPrefs.SetString("CenaAnterior", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
+    
         SceneManager.LoadScene("EscolhaPersonagem");
+        
     }
 
 

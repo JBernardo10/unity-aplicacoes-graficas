@@ -12,7 +12,7 @@ public class PersonagemManage : MonoBehaviour
         if (instancia == null)
         {
             instancia = this;
-            DontDestroyOnLoad(gameObject); // persiste entre cenas
+            DontDestroyOnLoad(instancia); // persiste entre cenas
         }
         else
         {
