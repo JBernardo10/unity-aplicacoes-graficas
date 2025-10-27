@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 227d5b2a34157184e8233343f5740d64
+guid: a26362f7b07bcc841ac3b8553ffcd847
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2023476691327924090
-    second: som_0
-  - first:
-      213: -1284425109102864741
-    second: som_1
-  - first:
-      213: -2377077095879989893
-    second: som_2
-  - first:
-      213: -5214973172417340840
-    second: som_3
+      213: -1962229150421126037
+    second: Alicate (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: som_0
+      name: Alicate (2)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 93
-        height: 173
+        x: 168
+        y: 117
+        width: 532
+        height: 817
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7732e57455d41c10800000000000000
-      internalID: 2023476691327924090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: som_1
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 45
-        width: 33
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b96d45f1b2ecc2ee0800000000000000
-      internalID: -1284425109102864741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: som_2
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 19
-        width: 45
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b752b50c9fce20fd0800000000000000
-      internalID: -2377077095879989893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: som_3
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 0
-        width: 52
-        height: 173
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85a5fd0a781b0a7b0800000000000000
-      internalID: -5214973172417340840
+      spriteID: b647b39ebf2c4c4e0800000000000000
+      internalID: -1962229150421126037
       vertices: []
       indices: 
       edges: []
@@ -226,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -236,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      som_0: 2023476691327924090
-      som_1: -1284425109102864741
-      som_2: -2377077095879989893
-      som_3: -5214973172417340840
+      Alicate (2)_0: -1962229150421126037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

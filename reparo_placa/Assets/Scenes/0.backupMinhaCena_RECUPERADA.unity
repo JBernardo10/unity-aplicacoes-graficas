@@ -1593,6 +1593,10 @@ MonoBehaviour:
   botaoRepetir: {fileID: 447740633}
   botaoMenu: {fileID: 2068476885}
   tempoParaConcluir: 60
+  somConclusao: {fileID: 8300000, guid: 376a0a8dbeabc4d4a9a995d8b201211e, type: 3}
+  somEstrela: {fileID: 8300000, guid: 07d530ae14f10934d814206aed5aea4c, type: 3}
+  somCliqueBotao: {fileID: 8300000, guid: 4a024935d31f338479f49e1b29ce93cb, type: 3}
+  somVitoria: {fileID: 0}
 --- !u!4 &654510495
 Transform:
   m_ObjectHideFlags: 0
@@ -3852,7 +3856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 8f88e9daa718f0347b49cc37e4a6e3d5, type: 3}
+      - m_Target: {fileID: 1530163080}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
         m_Mode: 1
@@ -3877,6 +3881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painelFerramentas: {fileID: 1530163080}
+  botaoAbrirFechar: {fileID: 0}
+  estaAberta: 0
+  caixaClicavel: 1
 --- !u!1 &1776176640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,6 +4491,8 @@ MonoBehaviour:
   botaoAlicate: {fileID: 1626445756}
   botaoFusivelNovo: {fileID: 1776176643}
   botaoFerroSolda: {fileID: 1096540321}
+  somCliqueBotao: {fileID: 8300000, guid: 4a024935d31f338479f49e1b29ce93cb, type: 3}
+  somHoverBotao: {fileID: 8300000, guid: 4a024935d31f338479f49e1b29ce93cb, type: 3}
 --- !u!224 &1960668797
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4807,8 +4816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 24}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
+  m_SizeDelta: {x: 0, y: -24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096207762
 MonoBehaviour:
