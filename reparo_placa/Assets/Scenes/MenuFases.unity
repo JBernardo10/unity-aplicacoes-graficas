@@ -2268,6 +2268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770522496}
   - component: {fileID: 1770522497}
+  - component: {fileID: 1770522498}
   m_Layer: 5
   m_Name: TelaFase
   m_TagString: Untagged
@@ -2307,6 +2308,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17507811ffcac094082402d2cbe48f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1770522498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770522495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18be460a2660f1d4b8ff4b0dbe1c22d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeMusicaFundo: Musica Fundo
 --- !u!1 &1813725856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,19 +2853,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2098612593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2077253180}
-        m_TargetAssemblyTypeName: CarregaNome, Assembly-CSharp
-        m_MethodName: AlteraPersonagem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
 --- !u!114 &2098612593
 MonoBehaviour:
   m_ObjectHideFlags: 0

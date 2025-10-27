@@ -1728,6 +1728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946446168}
   - component: {fileID: 946446169}
+  - component: {fileID: 946446170}
   m_Layer: 5
   m_Name: Menuprincipal
   m_TagString: Untagged
@@ -1774,6 +1775,19 @@ MonoBehaviour:
   som_ativo: {fileID: -1284425109102864741, guid: 227d5b2a34157184e8233343f5740d64, type: 3}
   som_mudo: {fileID: 0}
   Som: {fileID: 1732588472}
+--- !u!114 &946446170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946446167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18be460a2660f1d4b8ff4b0dbe1c22d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeMusicaFundo: Musica Fundo
 --- !u!1 &1130249937
 GameObject:
   m_ObjectHideFlags: 0

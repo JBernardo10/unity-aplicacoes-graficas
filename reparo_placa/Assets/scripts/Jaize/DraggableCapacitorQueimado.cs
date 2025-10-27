@@ -11,7 +11,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
     public GameObject audioFerroSolda, audioSugadorSolda, audioPinca;
     public float tempoSugador = 2f;
     [SerializeField] private GameObject PainelCampoTexto;
-    
+        
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, ProntoParaPinca, PresoNaPinca }
     private Estado estado = Estado.PresoNaPlaca;
