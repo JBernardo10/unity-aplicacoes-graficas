@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4312548587250865864}
   - component: {fileID: 1267318029376449919}
+  - component: {fileID: -7027775344744509608}
   m_Layer: 0
   m_Name: PrefabSonEstanho
   m_TagString: Untagged
@@ -129,3 +130,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7027775344744509608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431378461636240342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0928df4d2c9545241bc9078b6e865ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioefeito: {fileID: 1267318029376449919}

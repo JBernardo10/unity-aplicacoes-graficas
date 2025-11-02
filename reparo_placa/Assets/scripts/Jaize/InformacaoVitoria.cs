@@ -98,7 +98,7 @@ public class InformacaoVitoria : MonoBehaviour
 
     public void ProximaFase()
     {
-        //SceneManager.LoadScene("TutorialProximaFase");
+        SceneManager.LoadScene("0.backupMinhaCena_RECUPERADA");
     }
 
     public void Repetir()

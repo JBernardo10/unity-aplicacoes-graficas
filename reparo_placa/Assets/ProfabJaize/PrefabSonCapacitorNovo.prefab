@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921877186301483134}
   - component: {fileID: 3402322771248308186}
+  - component: {fileID: 8414876670892759489}
   m_Layer: 0
   m_Name: PrefabSonCapacitorNovo
   m_TagString: Untagged
@@ -129,3 +130,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8414876670892759489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228710981127615817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0928df4d2c9545241bc9078b6e865ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioefeito: {fileID: 3402322771248308186}

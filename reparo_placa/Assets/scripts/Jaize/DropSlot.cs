@@ -56,7 +56,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             ImagemCampoTexto2.SetActive(true);
 
             CancelInvoke(nameof(EsconderCampo));
-            Invoke(nameof(EsconderCampo), 5f);
+            Invoke(nameof(EsconderCampo), 2.5f);
             MostrarFeedback(true);
 
             preenchido = true;
@@ -124,7 +124,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             processo = StartCoroutine(ProcessarFerramenta(
                 "Soldando capacitor...", tempoFerro,
                 Estado.Soldado,
-                "✅ Capacitor soldado com sucesso na placa mãe!"
+                "Capacitor soldado com sucesso na placa mãe!"
             ));
         }
     }

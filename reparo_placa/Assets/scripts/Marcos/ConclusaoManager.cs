@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ConclusaoManager : MonoBehaviour
 {
@@ -239,7 +240,7 @@ public class ConclusaoManager : MonoBehaviour
     {
         // ✅ SOM ADICIONADO
         TocarSom(somCliqueBotao);
-        
+        SceneManager.LoadScene("ColocarProcessador");
         Debug.Log("Proxima Fase clicado");
     }
 
@@ -257,7 +258,7 @@ public class ConclusaoManager : MonoBehaviour
     {
         // ✅ SOM ADICIONADO
         TocarSom(somCliqueBotao);
-        
+        SceneManager.LoadScene("MenuFases");
         Debug.Log("Menu clicado");
     }
 

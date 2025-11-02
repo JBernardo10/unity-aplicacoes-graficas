@@ -1271,75 +1271,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'devs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devsdevs
-
-    devs
-
-    devs'
+  m_text: "Institui\xE7\xE3o:\nInstituto Federal de Educa\xE7\xE3o, Ci\xEAncia e
+    Tecnologia Baiano - Campus Senhor do Bonfim.\n\nDisciplina: \nAplica\xE7\xF5es
+    Gr\xE1ficas.\n\nProfessor-orientador:\nJesse Nery.\n\nAlunos-desenvolvedores:\nJaize
+    Ferreira\nJo\xE3o Bernardo\nMarcos Gabriel\nMarcos Vinicius.\n\nO jogo Repara
+    Mania \xE9 um software que foi desenvolvido pelos estudantes citados acima do
+    curso de Licenciatura em Ci\xEAncias da Computa\xE7\xE3o. O objetivo do jogo
+    \xE9 a realiza\xE7\xE3o de reparos de placa ou outros componentes do circuito
+    de forma l\xFAdica e din\xE2mica, o jogo conta com 3 fases, sendo a reparo placa
+    desenvolvida pela estudante Jaize, a fase Processador desenvolvida pelo estudante
+    Marcos Gabriel, e a fase Fusivel desenvolvida pela estudantes Marcos Vinicius.
+    O estudante Jo\xE3o Bernardo ficou respons\xE1vel pelo desenvolvimento das telas
+    de navega\xE7\xE3o e integra\xE7\xE3o das fases de forma fluida, sons de fundo,
+    escolha personagem e demais configura\xE7\xF5es.\n\nCr\xE9ditos dos sprites:
+    \nhttps://www.youtube.com/@DesenvolvedorUnity\n\nCr\xE9ditos dos sons:\nhttps://pixabay.com,
+    https://elevenlabs.io \nhttps://pixabay.com"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
@@ -1366,14 +1312,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1404,7 +1350,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -26.554443, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

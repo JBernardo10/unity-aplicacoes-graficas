@@ -10,7 +10,11 @@ public class TelaFase : MonoBehaviour
     }
     public void AbrirFase2()
     {
-       // SceneManager.LoadScene("TutorialLimpezaPlaca");
+        SceneManager.LoadScene("0.backupMinhaCena_RECUPERADA");
+    }
+    public void AbrirFase3()
+    {
+        SceneManager.LoadScene("ColocarProcessador");
     }
      public void Voltar()
     {
