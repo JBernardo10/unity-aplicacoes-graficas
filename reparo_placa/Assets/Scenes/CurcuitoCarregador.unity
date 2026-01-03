@@ -1837,7 +1837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -1546, y: 3}
+  m_AnchoredPosition: {x: -1542, y: 0}
   m_SizeDelta: {x: 900, y: 1070}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2129592256
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1891,8 +1891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painel: {fileID: 2129592255}
-  posFechado: {x: -120, y: 0}
-  posAberto: {x: 100, y: 0}
+  posFechado: {x: -90, y: 0}
+  posAberto: {x: 200, y: 0}
   velocidade: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
