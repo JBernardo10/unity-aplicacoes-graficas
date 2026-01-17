@@ -20,4 +20,12 @@ public class TelaFase : MonoBehaviour
     {
         SceneManager.LoadScene("TelaUsuario");
    }
+     public void AbrirFase4()
+    {
+        SceneManager.LoadScene("CircuitoCarregador");
+    }
+     public void AbrirFase5()
+    {
+        SceneManager.LoadScene("DescarteLixo");
+    }
 }
