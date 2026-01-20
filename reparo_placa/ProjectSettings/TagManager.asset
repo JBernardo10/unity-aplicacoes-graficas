@@ -15,6 +15,7 @@ TagManager:
   - Sugador
   - PastaTermica
   - Lixeira
+  - Tranformador
   layers:
   - Default
   - TransparentFX

@@ -3,15 +3,14 @@ using UnityEngine.EventSystems;
 using TMPro;
 using System.Collections;
 
-public class Lixeira : MonoBehaviour, IDropHandler
-{
-    public GameObject painelMensagem; // arraste o painel do Canvas
+public class LixeiraCircuitoCarregador : MonoBehaviour, IDropHandler
+{ public GameObject painelMensagem; // arraste o painel do Canvas
     public TMP_Text mensagemUI;       // arraste o Text que está dentro do painel
     public GameObject audioCapacitorQLixeira;
 
     [Header("Controle de descarte")]
-    public int totalDeCapacitoresQueimados = 2; // defina quantos precisam ser descartados
-    private int capacitoresDescartados = 0;   
+    public int totalQueimados = 1; // defina quantos precisam ser descartados
+    private int transformadorDescartado = 0;
 
     public float tempoMensagem = 6f; // tempo que cada mensagem ficará visível
 
@@ -19,17 +18,17 @@ public class Lixeira : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null)
         {
-            var capacitor = eventData.pointerDrag.GetComponentInChildren<DraggableCapacitorQueimadoUI>();
+            var transformador = eventData.pointerDrag.GetComponentInChildren<DraggableTranformadorQueimado>();
 
-            if (capacitor != null)
+            if (transformador != null)
             {
                 GameObject preFab = Instantiate(audioCapacitorQLixeira, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                capacitor.Descartar();
-                capacitoresDescartados++;
+                transformador.Descartar();
+                transformadorDescartado++;
 
-                if (capacitoresDescartados >= totalDeCapacitoresQueimados)
+                if (transformadorDescartado >= totalQueimados)
                 {
                     // Mostra primeiro "Objeto descartado!", depois "Adicione os capacitores bons."
                     StopAllCoroutines();
@@ -67,7 +66,7 @@ public class Lixeira : MonoBehaviour, IDropHandler
         yield return new WaitForSeconds(tempoMensagem);
 
         // Mensagem 2
-        mensagemUI.text = "Adicione os capacitores bons.";
+        mensagemUI.text = "Adicione o transformador bons.";
         yield return new WaitForSeconds(tempoMensagem);
 
         painelMensagem.SetActive(false);

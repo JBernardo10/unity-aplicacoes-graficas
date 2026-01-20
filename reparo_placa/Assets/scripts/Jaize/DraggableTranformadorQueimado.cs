@@ -4,13 +4,14 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
-public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class DraggableTranformadorQueimado: MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public TMP_Text mensagemUI; // arraste o Text do Canvas
     public float tempoFerro = 2f;
     public GameObject audioFerroSolda, audioSugadorSolda, audioPinca;
     public float tempoSugador = 2f;
     [SerializeField] private GameObject PainelCampoTexto;
+    
         
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, ProntoParaPinca, PresoNaPinca }
@@ -51,7 +52,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 GameObject preFab = Instantiate(audioPinca, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
+                mensagemUI.text = "Transformador preso na pinça! Leve até a lixeira.";
                 if (PainelCampoTexto != null)
                     PainelCampoTexto.SetActive(true);
                 estado = Estado.PresoNaPinca;
@@ -119,7 +120,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
     {
         if (estado == Estado.PresoNaPinca)
         {
-            mensagemUI.text = "Capacitor removido e descartado!";
+            mensagemUI.text = "Transformador removido e descartado!";
             if (PainelCampoTexto != null)
                 PainelCampoTexto.SetActive(true);
             Destroy(gameObject);
