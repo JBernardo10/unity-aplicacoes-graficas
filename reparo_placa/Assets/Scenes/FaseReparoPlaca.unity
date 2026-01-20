@@ -754,9 +754,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4225611922328248503, guid: 1f171db8b15918347b5a281b9057a90e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1562555243}
-    - targetCorrespondingSourceObject: {fileID: 4225611922328248503, guid: 1f171db8b15918347b5a281b9057a90e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1562555245}
   m_SourcePrefab: {fileID: 100100000, guid: 1f171db8b15918347b5a281b9057a90e, type: 3}
 --- !u!1 &248775339
 GameObject:
@@ -2557,7 +2554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 327, y: -136}
+  m_AnchoredPosition: {x: 346, y: -65}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1051970474
@@ -3170,18 +3167,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1562555245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562555238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62345cd8f7e78e7498531f1addabf695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1623131977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,7 +3849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7616703168978043732, guid: 70a0a4cc11bfbb94789909242e141a5f, type: 3}
+  m_Sprite: {fileID: -2565278521793586528, guid: 1001dbbb69e991f4c9da7cac2284423d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

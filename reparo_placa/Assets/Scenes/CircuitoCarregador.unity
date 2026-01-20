@@ -664,7 +664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7616703168978043732, guid: 70a0a4cc11bfbb94789909242e141a5f, type: 3}
+  m_Sprite: {fileID: -2565278521793586528, guid: 1001dbbb69e991f4c9da7cac2284423d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1275,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: -19}
+  m_AnchoredPosition: {x: 41, y: -14}
   m_SizeDelta: {x: 151.8878, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986359692
@@ -1864,7 +1864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: -122}
+  m_AnchoredPosition: {x: 343, y: -69}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415060714
@@ -3749,11 +3749,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6755591899107067055, guid: 9a81ab36aad18c64aa25a5895b2febe6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 35.234802
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 6755591899107067055, guid: 9a81ab36aad18c64aa25a5895b2febe6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -16.587494
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 6755591899107067055, guid: 9a81ab36aad18c64aa25a5895b2febe6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3771,9 +3771,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3465942061187436776, guid: 9a81ab36aad18c64aa25a5895b2febe6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 82398683107298527}
     - targetCorrespondingSourceObject: {fileID: 3465942061187436776, guid: 9a81ab36aad18c64aa25a5895b2febe6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 82398683107298526}
@@ -3870,18 +3867,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &82398683107298527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82398683107298523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62345cd8f7e78e7498531f1addabf695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &82398683107298528
 MonoBehaviour:
   m_ObjectHideFlags: 0
