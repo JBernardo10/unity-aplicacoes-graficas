@@ -122,9 +122,9 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             Destroy(preFab.gameObject, 2f);
 
             processo = StartCoroutine(ProcessarFerramenta(
-                "Soldando capacitor...", tempoFerro,
+                "Soldando transformador...", tempoFerro,
                 Estado.Soldado,
-                "Capacitor soldado com sucesso na placa mãe!"
+                "Transformador soldado com sucesso na placa mãe!"
             ));
         }
     }
