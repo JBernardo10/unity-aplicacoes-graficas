@@ -350,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 123.999756}
-  m_SizeDelta: {x: 200, y: 80}
+  m_AnchoredPosition: {x: 14.988994, y: 131.46889}
+  m_SizeDelta: {x: 229.978, y: 85.0623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239735912
 MonoBehaviour:
@@ -400,6 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440137693}
+  - component: {fileID: 440137694}
   m_Layer: 5
   m_Name: Fase
   m_TagString: Untagged
@@ -431,6 +432,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &440137694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440137692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8e89b7f7e568f4e863d3224d22905a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nomeMusicaFundo: Musica Fundo
 --- !u!1 &454069471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,8 +2295,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: -0.000021458}
+  m_SizeDelta: {x: 200, y: 85.062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532143282
 MonoBehaviour:
@@ -2707,6 +2721,7 @@ GameObject:
   - component: {fileID: 1887615416}
   - component: {fileID: 1887615415}
   - component: {fileID: 1887615414}
+  - component: {fileID: 1887615417}
   m_Layer: 5
   m_Name: ButtonVoltar
   m_TagString: Untagged
@@ -2777,7 +2792,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1887615415}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1887615417}
+        m_TargetAssemblyTypeName: TutorialCircuitoCarregador, Assembly-CSharp
+        m_MethodName: VoltarMenuFases
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1887615415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2816,6 +2843,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887615412}
   m_CullTransparentMesh: 1
+--- !u!114 &1887615417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887615412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4606254579ecb274bb62960beee1afec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1923992880
 GameObject:
   m_ObjectHideFlags: 0

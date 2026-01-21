@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class TutorialFaseReparo : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,4 +23,5 @@ public class TutorialFaseReparo : MonoBehaviour
         Screen.orientation = ScreenOrientation.Portrait;
         
     }
+    
 }
