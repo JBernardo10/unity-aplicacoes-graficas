@@ -3,7 +3,8 @@ using UnityEngine.EventSystems;
 
 public class SlotTransformador : MonoBehaviour, IDropHandler
 {
-    public Vector3 escalaAoEncaixar = new Vector3(20.0f, 20.0f, 20.0f);
+    // Escala do transformador quando encaixar
+    public Vector3 escalaAoEncaixar = new Vector3(3.0f, 3.0f, 3.0f);
 
     public void OnDrop(PointerEventData eventData)
     {
