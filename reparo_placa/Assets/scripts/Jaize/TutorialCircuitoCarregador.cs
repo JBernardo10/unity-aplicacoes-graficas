@@ -3,20 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class TutorialCircuitoCarregador : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+      public void IniciarCircuitoCarregador()
     {
-        
+        SceneManager.LoadScene("CircuitoCarregador");
     }
-
-    // Update is called once per frame
-    void Update()
+   
+     public void VoltarFases()
     {
-        
+        SceneManager.LoadScene("MenuFases");
     }
      public void VoltarMenuFases()
     {
-        SceneManager.LoadScene("MenuFases");
-         Screen.orientation = ScreenOrientation.Portrait;
+        SceneManager.LoadScene("TutorialCircuitoCarregador");
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 }

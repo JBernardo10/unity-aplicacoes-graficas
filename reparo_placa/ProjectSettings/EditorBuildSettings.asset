@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialReparoPlaca.unity
     guid: 8e91aeca426b67d4794567916bc0ec4a
   - enabled: 1
+    path: Assets/Scenes/TutorialCircuitoCarregador.unity
+    guid: 7d75402d60fea574abb54f489451957b
+  - enabled: 1
     path: Assets/Scenes/TelaConfiguracao.unity
     guid: 4c80c0dd6ca6ef74d8a130f64360d245
   - enabled: 1

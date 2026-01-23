@@ -22,7 +22,7 @@ public class TelaFase : MonoBehaviour
    }
      public void AbrirFase4()
     {
-        SceneManager.LoadScene("CircuitoCarregador");
+        SceneManager.LoadScene("TutorialCircuitoCarregador");
     }
      public void AbrirFase5()
     {

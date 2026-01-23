@@ -26,4 +26,6 @@ public class TextosTutorial : MonoBehaviour
         Painel1.SetActive(false);
         Painel2.SetActive(false);
     }
+
+  
 }
