@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3045fe5ebeab67488a82d0fc87a265d
+guid: 8c214905ede59dc418de6112b57f08a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5507094454822019016
-    second: lixeira-Organico-semFundo_0
+      213: -3213952399367883438
+    second: LixeiraOrganicos_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lixeira-Organico-semFundo_0
+      name: LixeiraOrganicos_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 27
-        width: 226
-        height: 431
+        x: 41
+        y: 110
+        width: 326
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8306fcb65ced293b0800000000000000
-      internalID: -5507094454822019016
+      spriteID: 255b9ae225fb563d0800000000000000
+      internalID: -3213952399367883438
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lixeira-Organico-semFundo_0: -5507094454822019016
+      LixeiraOrganicos_0: -3213952399367883438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e275d120044408140995b1766cf830cf
+guid: fdd53104612638c4e8a8f7925a6a39ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6360714881668961961
-    second: eletronicos-sem fundo_0
+      213: 6100511801760312872
+    second: LixeiraEletronicos_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: eletronicos-sem fundo_0
+      name: LixeiraEletronicos_0
       rect:
         serializedVersion: 2
-        x: 167
-        y: 42
-        width: 225
-        height: 374
+        x: 46
+        y: 94
+        width: 316
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a65b6ffb7cc54850800000000000000
-      internalID: 6360714881668961961
+      spriteID: 82e600c692f59a450800000000000000
+      internalID: 6100511801760312872
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      eletronicos-sem fundo_0: 6360714881668961961
+      LixeiraEletronicos_0: 6100511801760312872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

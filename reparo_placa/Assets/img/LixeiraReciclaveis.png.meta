@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 27c31848b78681548ba740e4abfa1ff1
+guid: 6a0b4c5ae27726840b6dfecbca0cd98a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1180444606430106454
-    second: lixoReciclavel-semFundo_0
+      213: -8997974965056994731
+    second: LixeiraReciclaveis_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lixoReciclavel-semFundo_0
+      name: LixeiraReciclaveis_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 49
-        width: 226
-        height: 402
+        x: 41
+        y: 93
+        width: 326
+        height: 451
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aac25bc72e73e9fe0800000000000000
-      internalID: -1180444606430106454
+      spriteID: 5528bed4175c02380800000000000000
+      internalID: -8997974965056994731
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lixoReciclavel-semFundo_0: -1180444606430106454
+      LixeiraReciclaveis_0: -8997974965056994731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
