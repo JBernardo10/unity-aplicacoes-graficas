@@ -16,6 +16,9 @@ TagManager:
   - PastaTermica
   - Lixeira
   - Tranformador
+  - Reciclavel
+  - Eletronico
+  - Organico
   layers:
   - Default
   - TransparentFX

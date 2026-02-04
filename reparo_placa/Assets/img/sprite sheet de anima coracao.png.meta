@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: eadc8dac3eab50f4fbcfa0be9816f885
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4917397949377121105
+    second: sprite sheet de anima coracao_0
+  - first:
+      213: -4888541350872935022
+    second: sprite sheet de anima coracao_1
+  - first:
+      213: -1482873526667258004
+    second: sprite sheet de anima coracao_2
+  - first:
+      213: 4667750639393052092
+    second: sprite sheet de anima coracao_3
+  - first:
+      213: 6790140316612982037
+    second: sprite sheet de anima coracao_4
+  - first:
+      213: -396725043285736182
+    second: sprite sheet de anima coracao_5
+  - first:
+      213: 1656336508173055159
+    second: sprite sheet de anima coracao_6
+  - first:
+      213: -6221727169297904353
+    second: sprite sheet de anima coracao_7
+  - first:
+      213: 373429436914404331
+    second: sprite sheet de anima coracao_8
+  - first:
+      213: 5333893209390237877
+    second: sprite sheet de anima coracao_9
+  - first:
+      213: -551343152155848985
+    second: sprite sheet de anima coracao_10
+  - first:
+      213: 1716367363617044053
+    second: sprite sheet de anima coracao_11
+  - first:
+      213: -4362145727684288795
+    second: sprite sheet de anima coracao_12
+  - first:
+      213: -8556635209550012259
+    second: sprite sheet de anima coracao_13
+  - first:
+      213: -5263900776722021108
+    second: sprite sheet de anima coracao_14
+  - first:
+      213: -1795156342034813756
+    second: sprite sheet de anima coracao_15
+  - first:
+      213: 8613320401233696506
+    second: sprite sheet de anima coracao_16
+  - first:
+      213: -5510270869361953877
+    second: sprite sheet de anima coracao_17
+  - first:
+      213: -5644380322496755894
+    second: sprite sheet de anima coracao_18
+  - first:
+      213: 6327046036466452812
+    second: sprite sheet de anima coracao_19
+  - first:
+      213: -935003140219309947
+    second: sprite sheet de anima coracao_20
+  - first:
+      213: -8199934593423199987
+    second: sprite sheet de anima coracao_21
+  - first:
+      213: -1308452115024588693
+    second: sprite sheet de anima coracao_22
+  - first:
+      213: 9169236987999135500
+    second: sprite sheet de anima coracao_23
+  - first:
+      213: 5990748614773189365
+    second: sprite sheet de anima coracao_24
+  - first:
+      213: -6390311632917060799
+    second: sprite sheet de anima coracao_25
+  - first:
+      213: -388137623331626331
+    second: sprite sheet de anima coracao_26
+  - first:
+      213: 7572163763519318589
+    second: sprite sheet de anima coracao_27
+  - first:
+      213: -2213040238807771816
+    second: sprite sheet de anima coracao_28
+  - first:
+      213: -1828507422028333479
+    second: sprite sheet de anima coracao_29
+  - first:
+      213: 857656941079558307
+    second: sprite sheet de anima coracao_30
+  - first:
+      213: 9169659724061368603
+    second: sprite sheet de anima coracao_31
+  - first:
+      213: 7573190466035746426
+    second: sprite sheet de anima coracao_32
+  - first:
+      213: 4928443661831511219
+    second: sprite sheet de anima coracao_33
+  - first:
+      213: -6998968286924523641
+    second: sprite sheet de anima coracao_34
+  - first:
+      213: 8469096711040785256
+    second: sprite sheet de anima coracao_35
+  - first:
+      213: -2354169645498959748
+    second: sprite sheet de anima coracao_36
+  - first:
+      213: 6599052545214976062
+    second: sprite sheet de anima coracao_37
+  - first:
+      213: 4513970029096398979
+    second: sprite sheet de anima coracao_38
+  - first:
+      213: 8583587891152973058
+    second: sprite sheet de anima coracao_39
+  - first:
+      213: 4892978908476076842
+    second: sprite sheet de anima coracao_40
+  - first:
+      213: 3731418672126408286
+    second: sprite sheet de anima coracao_41
+  - first:
+      213: 6152342382943474513
+    second: sprite sheet de anima coracao_42
+  - first:
+      213: 179080767128661095
+    second: sprite sheet de anima coracao_43
+  - first:
+      213: 667930123527180119
+    second: sprite sheet de anima coracao_44
+  - first:
+      213: 5680651583464787159
+    second: sprite sheet de anima coracao_45
+  - first:
+      213: 4724408369553357090
+    second: sprite sheet de anima coracao_46
+  - first:
+      213: 4803719536840544035
+    second: sprite sheet de anima coracao_47
+  - first:
+      213: 2824484842731380159
+    second: sprite sheet de anima coracao_48
+  - first:
+      213: -6535482466135894681
+    second: sprite sheet de anima coracao_49
+  - first:
+      213: -2228255016137978610
+    second: sprite sheet de anima coracao_50
+  - first:
+      213: -5669055944201638214
+    second: sprite sheet de anima coracao_51
+  - first:
+      213: -2251705928726932873
+    second: sprite sheet de anima coracao_52
+  - first:
+      213: -8999678376393364910
+    second: sprite sheet de anima coracao_53
+  - first:
+      213: -3500654725298260219
+    second: sprite sheet de anima coracao_54
+  - first:
+      213: 1261732883540564469
+    second: sprite sheet de anima coracao_55
+  - first:
+      213: 2776808797799888430
+    second: sprite sheet de anima coracao_56
+  - first:
+      213: 5054776888803437393
+    second: sprite sheet de anima coracao_57
+  - first:
+      213: 8162020261110067891
+    second: sprite sheet de anima coracao_58
+  - first:
+      213: -2372920950704940886
+    second: sprite sheet de anima coracao_59
+  - first:
+      213: 6357568794488156099
+    second: sprite sheet de anima coracao_60
+  - first:
+      213: 2638438268298950366
+    second: sprite sheet de anima coracao_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 712
+        width: 211
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa474285e94e1cbb0800000000000000
+      internalID: -4917397949377121105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 710
+        width: 203
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295196fba89682cb0800000000000000
+      internalID: -4888541350872935022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_2
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 712
+        width: 200
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67da245266cb6be0800000000000000
+      internalID: -1482873526667258004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_3
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 711
+        width: 193
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb51029c97e27c040800000000000000
+      internalID: 4667750639393052092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51576ca64ac6b3e50800000000000000
+      internalID: 6790140316612982037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 342
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05c371dcac8e7af0800000000000000
+      internalID: -396725043285736182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 342
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b47a2e474d7cf610800000000000000
+      internalID: 1656336508173055159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 342
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d0a988a1cf7a9a0800000000000000
+      internalID: -6221727169297904353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb05f72810be2500800000000000000
+      internalID: 373429436914404331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8c29f1d9bc50a40800000000000000
+      internalID: 5333893209390237877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee0862035c3958f0800000000000000
+      internalID: -551343152155848985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite sheet de anima coracao_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1
+        width: 256
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556b7740603c1d710800000000000000
+      internalID: 1716367363617044053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a571f9658f6cc43449aae497cf5fbeed
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":256.0,"y":341.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      sprite sheet de anima coracao_0: -4917397949377121105
+      sprite sheet de anima coracao_1: -4888541350872935022
+      sprite sheet de anima coracao_10: -551343152155848985
+      sprite sheet de anima coracao_11: 1716367363617044053
+      sprite sheet de anima coracao_2: -1482873526667258004
+      sprite sheet de anima coracao_3: 4667750639393052092
+      sprite sheet de anima coracao_4: 6790140316612982037
+      sprite sheet de anima coracao_5: -396725043285736182
+      sprite sheet de anima coracao_6: 1656336508173055159
+      sprite sheet de anima coracao_7: -6221727169297904353
+      sprite sheet de anima coracao_8: 373429436914404331
+      sprite sheet de anima coracao_9: 5333893209390237877
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
