@@ -11,8 +11,14 @@ public class ControladorVida : MonoBehaviour
     public Color corVazia = Color.black;
     //public int vidas = 5;        // começa com 5 vidas
     //public int vidasMaximas = 5; // limite máximo
+    private float tempoInicio;
+    public float tempoTotalFase; 
 
-
+    private void Start()
+    {
+        // Marca o tempo inicial da fase
+        tempoInicio = Time.time;
+    }
     void Update()
     {
         AtualizarCoroes();
@@ -37,7 +43,9 @@ public class ControladorVida : MonoBehaviour
     }
 
     void PerderFase()
-    {
+    {   
+        tempoTotalFase = Time.time - tempoInicio;
+        PlayerPrefs.SetFloat("UltimoTempoFase", tempoTotalFase);
         // Aqui você escolhe o que acontece quando perde
         Debug.Log("Game Over! O jogador perdeu a fase.");
 
