@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class LixeiraOrganicos : MonoBehaviour, IDropHandler
 {
     //public int pontos = 0;
-    public int vidas = 5;
+    public int vidas = 5;       
     public int vidasMaximas = 5;
 
     public void OnDrop(PointerEventData eventData)

@@ -16,6 +16,30 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
     public static int acertos = 0;
     public static int erros = 0;
 
+    [Header("Controle de vitória")]
+    public static int totalLixosNaMesa = 0; 
+    public static bool todosLixosCorretos = false;
+
+    [Header("Sons")]
+    public AudioClip somAcerto;   // som de objeto caindo na lixeira
+    public AudioClip somErro;     // som de erro (opcional)
+    private AudioSource audioSource;
+
+
+    private void Start()
+    {
+        // Conta todos os objetos que possuem o script Lixo
+        Lixo[] lixos = GameObject.FindObjectsOfType<Lixo>();
+        totalLixosNaMesa = lixos.Length;
+
+        todosLixosCorretos = false;
+        acertos = 0;
+        erros = 0;
+
+        // Configura o AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -28,7 +52,7 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
         // Verifica se o lixo tem a mesma tag da lixeira atual
         if (lixo.tag == this.gameObject.tag)
         {
-            acertos++; //conta acerto
+            acertos++;
 
             if (vidas < vidasMaximas)
                 vidas++;
@@ -38,14 +62,29 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
             mensagemFeedback.color = Color.green;
             Debug.Log("Acertou! Vidas: " + vidas + " | Acertos: " + acertos);
 
+             // 🔊 Toca som de acerto
+            if (somAcerto != null)
+                audioSource.PlayOneShot(somAcerto);
+
+
+            // Verifica se já acertou todos os lixos
+            if (acertos == totalLixosNaMesa)
+            {
+                todosLixosCorretos = true;
+                Debug.Log("Todos os lixos foram colocados corretamente!");
+            }
         }
         else
         {
-            erros++; //conta erro
+            erros++;
             vidas--;
             mensagemFeedback.text = "Errou!";
             mensagemFeedback.color = Color.red;
             Debug.Log("Errou! Vidas: " + vidas + " | Erros: " + erros);
+
+            //🔊 Toca som de erro (opcional)
+            if (somErro != null)
+                audioSource.PlayOneShot(somErro);
 
         }
 

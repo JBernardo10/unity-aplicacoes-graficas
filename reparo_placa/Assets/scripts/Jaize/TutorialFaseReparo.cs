@@ -23,5 +23,11 @@ public class TutorialFaseReparo : MonoBehaviour
         Screen.orientation = ScreenOrientation.Portrait;
         
     }
+
+    public void VoltarParaMenuFases()
+    {
+        SceneManager.LoadScene("MenuFases");
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
     
 }
