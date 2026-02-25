@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 38155f1dffa4ce9479162d5476b5d810
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4511148416604163495
+    second: lixosFases_0
+  - first:
+      213: 1891446580054256435
+    second: lixosFases_1
+  - first:
+      213: -8730909372722648753
+    second: lixosFases_2
+  - first:
+      213: -8471489215849580054
+    second: lixosFases_3
+  - first:
+      213: -2422855005968823873
+    second: lixosFases_4
+  - first:
+      213: 3146689272953881379
+    second: lixosFases_5
+  - first:
+      213: 8636864867563410839
+    second: lixosFases_6
+  - first:
+      213: 7199284408226731708
+    second: lixosFases_7
+  - first:
+      213: 1249262196522946322
+    second: lixosFases_8
+  - first:
+      213: 790439459588228189
+    second: lixosFases_9
+  - first:
+      213: 8362893135243141031
+    second: lixosFases_10
+  - first:
+      213: 4922126148297512306
+    second: lixosFases_11
+  - first:
+      213: -1233493939404390267
+    second: lixosFases_12
+  - first:
+      213: 6603805799894588467
+    second: lixosFases_13
+  - first:
+      213: 4207453597346260088
+    second: lixosFases_14
+  - first:
+      213: -8352761113549244833
+    second: lixosFases_15
+  - first:
+      213: -4686702263587923033
+    second: lixosFases_16
+  - first:
+      213: -7255272893982895547
+    second: lixosFases_17
+  - first:
+      213: 7490818640683486135
+    second: lixosFases_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lixosFases_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 467
+        height: 878
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9523e3b8a6e2561c0800000000000000
+      internalID: -4511148416604163495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 845
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33be2cba4a4cf3a10800000000000000
+      internalID: 1891446580054256435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 677
+        width: 226
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49ecb01f2495d680800000000000000
+      internalID: -8730909372722648753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 873
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae9bbba21793f6a80800000000000000
+      internalID: -8471489215849580054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_4
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 829
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb983fa753a406ed0800000000000000
+      internalID: -2422855005968823873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_5
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 858
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323c2fcc8394bab20800000000000000
+      internalID: 3146689272953881379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 811
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7951b2446de4cd770800000000000000
+      internalID: 8636864867563410839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_7
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 799
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6dc5d960ff8e360800000000000000
+      internalID: 7199284408226731708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_8
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 791
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f031f4955465110800000000000000
+      internalID: 1249262196522946322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_9
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 676
+        width: 125
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d544535208438fa00800000000000000
+      internalID: 790439459588228189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 716
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af58bc7ff6fe0470800000000000000
+      internalID: 8362893135243141031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_11
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 763
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2755fe047a7ee4440800000000000000
+      internalID: 4922126148297512306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 533
+        width: 185
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58044352ccfb1eee0800000000000000
+      internalID: -1233493939404390267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_13
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 701
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c9164f26e65ab50800000000000000
+      internalID: 6603805799894588467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 588
+        width: 131
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87463c631c0e36a30800000000000000
+      internalID: 4207453597346260088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_15
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 692
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f567335a508051c80800000000000000
+      internalID: -8352761113549244833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 0
+        width: 461
+        height: 672
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ab92da5f1d75feb0800000000000000
+      internalID: -4686702263587923033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_17
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 665
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54211a53eb7105b90800000000000000
+      internalID: -7255272893982895547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lixosFases_18
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 636
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb40da9ddbb4f760800000000000000
+      internalID: 7490818640683486135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b6f8eb69b7a91ee43892c320b0729d63
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lixosFases_0: -4511148416604163495
+      lixosFases_1: 1891446580054256435
+      lixosFases_10: 8362893135243141031
+      lixosFases_11: 4922126148297512306
+      lixosFases_12: -1233493939404390267
+      lixosFases_13: 6603805799894588467
+      lixosFases_14: 4207453597346260088
+      lixosFases_15: -8352761113549244833
+      lixosFases_16: -4686702263587923033
+      lixosFases_17: -7255272893982895547
+      lixosFases_18: 7490818640683486135
+      lixosFases_2: -8730909372722648753
+      lixosFases_3: -8471489215849580054
+      lixosFases_4: -2422855005968823873
+      lixosFases_5: 3146689272953881379
+      lixosFases_6: 8636864867563410839
+      lixosFases_7: 7199284408226731708
+      lixosFases_8: 1249262196522946322
+      lixosFases_9: 790439459588228189
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

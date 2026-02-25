@@ -580,8 +580,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InformacaoVitoria, Assembly-CSharp
+      - m_Target: {fileID: 1753501424}
+        m_TargetAssemblyTypeName: InformacoesDerrota, Assembly-CSharp
         m_MethodName: Repetir
         m_Mode: 1
         m_Arguments:
@@ -1201,8 +1201,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InformacaoVitoria, Assembly-CSharp
+      - m_Target: {fileID: 1753501424}
+        m_TargetAssemblyTypeName: InformacoesDerrota, Assembly-CSharp
         m_MethodName: ProximaFase
         m_Mode: 1
         m_Arguments:
@@ -1614,8 +1614,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InformacaoVitoria, Assembly-CSharp
+      - m_Target: {fileID: 1753501424}
+        m_TargetAssemblyTypeName: InformacoesDerrota, Assembly-CSharp
         m_MethodName: MenuInicial
         m_Mode: 1
         m_Arguments:
