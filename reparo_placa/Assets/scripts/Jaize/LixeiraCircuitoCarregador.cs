@@ -66,8 +66,8 @@ public class LixeiraCircuitoCarregador : MonoBehaviour, IDropHandler
         yield return new WaitForSeconds(tempoMensagem);
 
         // Mensagem 2
-        mensagemUI.text = "Adicione o transformador bons.";
-        yield return new WaitForSeconds(tempoMensagem);
+        //mensagemUI.text = "Adicione o transformador bons.";
+        //yield return new WaitForSeconds(tempoMensagem);
 
         painelMensagem.SetActive(false);
     }

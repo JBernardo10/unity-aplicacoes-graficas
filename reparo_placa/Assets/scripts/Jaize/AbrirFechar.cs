@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class AbriFechar : MonoBehaviour
 {
     public RectTransform painel;
+    
+    public Image imagemMultimetro;
     public Vector2 posFechado = new Vector2(-358, 0); // posição fora da tela
     public Vector2 posAberto = new Vector2(0, 0);      // posição visível
     public float velocidade = 10f;
@@ -30,4 +35,13 @@ public class AbriFechar : MonoBehaviour
         aberto = !aberto;
         destino = aberto ? posAberto : posFechado;
     }
+      public void BotaoMultiAbrir()
+    {
+        if (imagemMultimetro.gameObject.activeSelf == false)
+        {
+            Alternar();
+            imagemMultimetro.gameObject.SetActive(true);            
+        }
+    }
+  
 }

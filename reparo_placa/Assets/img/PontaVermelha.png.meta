@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: baa7f49fc664bc0459ad5e5b98c1fa82
+guid: 72b6cac5698c4d946aff4a68daacde2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3049649711137612326
-    second: Carregador-SemFundo_0
+      213: -6561918892028789509
+    second: PontaVermelha_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Carregador-SemFundo_0
+      name: PontaVermelha_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 29
-        width: 450
-        height: 441
+        x: 57
+        y: 20
+        width: 194
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: add1546deb77da5d0800000000000000
-      internalID: -3049649711137612326
+      spriteID: bfcf2b3c8816fe4a0800000000000000
+      internalID: -6561918892028789509
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Carregador-SemFundo_0: -3049649711137612326
+      PontaVermelha_0: -6561918892028789509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

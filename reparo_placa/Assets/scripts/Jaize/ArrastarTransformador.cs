@@ -10,6 +10,8 @@ public class ArrastarTransformador : MonoBehaviour,
     private Vector3 escalaOriginal;
     private bool encaixado = false;
 
+    public SistemaPontuacao sistemaPontuacao; // 🔥 referência da pontuação
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -44,17 +46,32 @@ public class ArrastarTransformador : MonoBehaviour,
     }
 
     // 🔥 CHAMADO PELO SlotTransformador
-   public void EncaixarNoSlot(Transform slot, Vector3 novaEscala)
-{
-    encaixado = true;
+    public void EncaixarNoSlot(Transform slot, Vector3 novaEscala)
+    {
+        encaixado = true;
 
-    RectTransform slotRect = slot.GetComponent<RectTransform>();
+        RectTransform slotRect = slot.GetComponent<RectTransform>();
 
-    rectTransform.SetParent(slotRect, false);
+        rectTransform.SetParent(slotRect, false);
 
-    rectTransform.localScale = Vector3.one; // zera herança
-    rectTransform.anchoredPosition = Vector2.zero;
+        rectTransform.localScale = Vector3.one;
+        rectTransform.anchoredPosition = Vector2.zero;
 
-    rectTransform.sizeDelta = new Vector2(120, 120); // 👈 CONTROLE REAL DO TAMANHO
-}
+        rectTransform.sizeDelta = new Vector2(120, 120);
+
+        // ⭐ ADICIONA PONTOS
+        if (sistemaPontuacao != null)
+        {
+            sistemaPontuacao.AdicionarPontos(20);
+        }
+    }
+
+    // ❌ REMOVER PONTOS
+    public void ErroFerramenta()
+    {
+        if (sistemaPontuacao != null)
+        {
+            sistemaPontuacao.AdicionarPontos(-10);
+        }
+    }
 }
