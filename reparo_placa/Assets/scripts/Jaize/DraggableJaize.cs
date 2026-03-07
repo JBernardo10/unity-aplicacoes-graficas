@@ -8,6 +8,8 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Vector3 startPosition;
     private Transform startParent;
 
+    public bool segurado = false;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -25,11 +27,14 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         //rectTransform.position = Input.mousePosition;
         rectTransform.position = eventData.position;
+        segurado = true;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
+        segurado = false;
 
         // Se não encaixou no slot, volta para a posição original
         if (transform.parent == startParent)

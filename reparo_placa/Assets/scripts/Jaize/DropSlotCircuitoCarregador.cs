@@ -11,7 +11,13 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
     public GameObject audioFerroSolda;
     public GameObject audioEstanho;
 
-    public SistemaPontuacao sistemaPontuacao; // ⭐ SISTEMA DE PONTUAÇÃO
+    public SistemaPontuacao sistemaPontuacao;
+
+    // ⭐ CONTROLE DE PONTUAÇÃO
+    private bool pontoFerro = false;
+    private bool pontoEstanho = false;
+
+    private string ultimaFerramentaErro = ""; 
 
     [Header("Feedback")]
     public Image feedbackImage;  
@@ -33,6 +39,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
     public void OnDrop(PointerEventData eventData)
     {
         if (preenchido) return;
+
         GameObject dropped = eventData.pointerDrag;
         if (dropped == null) return;
 
@@ -84,14 +91,20 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
 
         if (estado == Estado.SlotVazio) return;
 
-        // ⭐ USANDO ESTANHO CORRETAMENTE
+        // ================= ESTANHO CORRETO =================
         if (estado == Estado.TranformadorInserido && ferramentaAtual == "Estanho")
         {
+            ultimaFerramentaErro = ""; 
+
             GameObject preFab = Instantiate(audioEstanho, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 2f);
 
-            if (sistemaPontuacao != null)
+            if (!pontoEstanho && sistemaPontuacao != null)
                 sistemaPontuacao.AdicionarPontos(20);
+                pontoEstanho = true;
+
+            if (processo != null)
+                StopCoroutine(processo);
 
             processo = StartCoroutine(ProcessarFerramenta(
                 tempoEstanho,
@@ -99,14 +112,20 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             ));
         }
 
-        // ⭐ USANDO FERRO DE SOLDA CORRETAMENTE
+        // ================= FERRO DE SOLDA CORRETO =================
         else if (estado == Estado.EstanhoAplicado && ferramentaAtual == "FerroSolda")
         {
+            ultimaFerramentaErro = ""; 
+
             GameObject preFab = Instantiate(audioFerroSolda, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 2f);
 
-            if (sistemaPontuacao != null)
+            if (!pontoFerro && sistemaPontuacao != null)
                 sistemaPontuacao.AdicionarPontos(20);
+                pontoFerro = true;
+
+            if (processo != null)
+                StopCoroutine(processo);
 
             processo = StartCoroutine(ProcessarFerramenta(
                 tempoFerro,
@@ -114,11 +133,18 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             ));
         }
 
-        // ❌ FERRAMENTA ERRADA
+        // ================= FERRAMENTA ERRADA =================
         else
         {
-            if (sistemaPontuacao != null)
-                sistemaPontuacao.AdicionarPontos(-10);
+            if (ferramentaAtual != ultimaFerramentaErro)
+            {
+                if (sistemaPontuacao != null)
+                    sistemaPontuacao.AdicionarPontos(-10);
+                    pontoEstanho = false;
+                    pontoEstanho = false;
+
+                ultimaFerramentaErro = ferramentaAtual;
+            }
         }
     }
 

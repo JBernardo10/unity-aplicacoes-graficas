@@ -11,6 +11,7 @@ public class ArrastarTransformador : MonoBehaviour,
     private bool encaixado = false;
 
     public SistemaPontuacao sistemaPontuacao; // 🔥 referência da pontuação
+    
 
     void Awake()
     {

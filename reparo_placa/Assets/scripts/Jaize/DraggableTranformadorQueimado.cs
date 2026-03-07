@@ -9,14 +9,21 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
     public float tempoSugador = 2f;
 
     public SistemaPontuacao sistemaPontuacao;
+    
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, PresoNaPinca }
     private Estado estado = Estado.PresoNaPlaca;
 
     private bool dentro = false;
     private string ferramentaAtual = "";
+    private string ultimaFerramentaErro = ""; // NOVO: controla erro repetido
     private Coroutine processo = null;
     private Transform pinca;
+
+       // ⭐ CONTROLE DE PONTUAÇÃO
+    private bool pontoFerro = false;
+    private bool pontoSugador = false;
+    private bool pontoPinca = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -25,38 +32,49 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
             ferramentaAtual = eventData.pointerDrag.tag;
             dentro = true;
 
-            // FERRO DE SOLDA
+            // ================= FERRO DE SOLDA =================
             if (estado == Estado.PresoNaPlaca && ferramentaAtual == "FerroSolda")
             {
+                ultimaFerramentaErro = ""; // reseta erro
+
                 GameObject preFab = Instantiate(audioFerroSolda, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                if (sistemaPontuacao != null)
+                if (!pontoFerro && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
+                    pontoFerro = true;
+
+                }
 
                 processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.FerroAquecido));
             }
 
-            // SUGADOR
+            // ================= SUGADOR =================
             else if (estado == Estado.FerroAquecido && ferramentaAtual == "Sugador")
             {
+                ultimaFerramentaErro = ""; // reseta erro
+
                 GameObject preFab = Instantiate(audioSugadorSolda, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                if (sistemaPontuacao != null)
+                if (!pontoSugador && sistemaPontuacao != null)
                     sistemaPontuacao.AdicionarPontos(20);
+                    pontoSugador= true;
 
                 processo = StartCoroutine(ProcessarFerramenta(tempoSugador, Estado.Sugado));
             }
 
-            // PINÇA
+            // ================= PINÇA =================
             else if (estado == Estado.Sugado && ferramentaAtual == "Pinca")
             {
+                ultimaFerramentaErro = ""; // reseta erro
+
                 GameObject preFab = Instantiate(audioPinca, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                if (sistemaPontuacao != null)
+                if (!pontoPinca && sistemaPontuacao != null)
                     sistemaPontuacao.AdicionarPontos(20);
+                    pontoPinca= true;
 
                 estado = Estado.PresoNaPinca;
                 pinca = eventData.pointerDrag.transform;
@@ -64,11 +82,20 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                 transform.localPosition = Vector3.zero;
             }
 
-            // FERRAMENTA ERRADA
+            // ================= FERRAMENTA ERRADA =================
             else
             {
-                if (sistemaPontuacao != null)
-                    sistemaPontuacao.AdicionarPontos(-10);
+                // só perde ponto se trocar a ferramenta
+                if (ferramentaAtual != ultimaFerramentaErro)
+                {
+                    if (sistemaPontuacao != null)
+                        sistemaPontuacao.AdicionarPontos(-10);
+                        pontoFerro = false;
+                        pontoSugador = false;
+                        pontoPinca = false;
+
+                    ultimaFerramentaErro = ferramentaAtual;
+                }
 
                 processo = StartCoroutine(ProcessarFerramenta(1f, Estado.PresoNaPlaca));
             }
