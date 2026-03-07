@@ -44,7 +44,7 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoFerro = true;
 
-                }
+                }   
 
                 processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.FerroAquecido));
             }

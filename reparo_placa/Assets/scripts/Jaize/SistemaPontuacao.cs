@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SistemaPontuacao : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class SistemaPontuacao : MonoBehaviour
         }
 
         AtualizarPontuacao();
+         PerdeFase();
+
     }
 
     void AtualizarPontuacao()
@@ -30,6 +33,15 @@ public class SistemaPontuacao : MonoBehaviour
         if (textoPontuacao != null)
         {
             textoPontuacao.text = pontuacao.ToString();
+        }
+    }
+
+    void PerdeFase()
+    {
+        if(pontuacao == 0)
+        {
+            SceneManager.LoadScene("TelaDerrota");
+            Screen.orientation = ScreenOrientation.Portrait;
         }
     }
 }
