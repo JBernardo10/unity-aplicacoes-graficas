@@ -8,6 +8,10 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Vector3 startPosition;
     private Transform startParent;
 
+    // Referência ao PanelFerramentas (arraste o objeto no Inspector)
+    public Transform panelFerramentas;
+
+
     public bool segurado = false;
 
     private void Awake()
@@ -20,6 +24,8 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         startPosition = rectTransform.position;
         startParent = transform.parent;
+        // Durante o drag, muda o parent para o PanelFerramentas
+        transform.SetParent(panelFerramentas);
         canvasGroup.blocksRaycasts = false; // Permite detectar o drop
     }
 
@@ -37,8 +43,9 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         segurado = false;
 
         // Se não encaixou no slot, volta para a posição original
-        if (transform.parent == startParent)
+        if (transform.parent == panelFerramentas)
         {
+            transform.SetParent(startParent);
             rectTransform.position = startPosition;
         }
     }
