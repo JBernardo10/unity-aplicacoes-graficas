@@ -51,7 +51,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             GameObject preFab = Instantiate(audioTranformadorCorretoEncaixado, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 1f);
 
-            Debug.Log("✅ Novo tranformador instanciado no slot!");
+            //Debug.Log("✅ Novo tranformador instanciado no slot!");
             MostrarFeedback(true);
 
             preenchido = true;
@@ -59,7 +59,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
         }
         else
         {
-            Debug.Log("❌ Objeto errado, não é um tranformador.");
+            //Debug.Log("❌ Objeto errado, não é um tranformador.");
             MostrarFeedback(false);
         }
     }
@@ -102,6 +102,13 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             if (!pontoEstanho && sistemaPontuacao != null)
                 sistemaPontuacao.AdicionarPontos(20);
                 pontoEstanho = true;
+                TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+   
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(5);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
 
             if (processo != null)
                 StopCoroutine(processo);
@@ -123,6 +130,13 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             if (!pontoFerro && sistemaPontuacao != null)
                 sistemaPontuacao.AdicionarPontos(20);
                 pontoFerro = true;
+                TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+            
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(6);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
 
             if (processo != null)
                 StopCoroutine(processo);
@@ -182,11 +196,11 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
                     controlador.RegistrarObjetivoConcluido();
                     objetivoRegistrado = true;
 
-                    Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                 else
                 {
-                    Debug.LogWarning("Nenhum objeto com o script TelaVitoriaJaize foi encontrado na cena!");
+                    //Debug.LogWarning("Nenhum objeto com o script TelaVitoriaJaize foi encontrado na cena!");
                 }
             }
         }

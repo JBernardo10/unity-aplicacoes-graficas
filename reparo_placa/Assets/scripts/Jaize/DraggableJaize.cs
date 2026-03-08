@@ -46,7 +46,8 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (transform.parent == panelFerramentas)
         {
             transform.SetParent(startParent);
-            rectTransform.position = startPosition;
+            //rectTransform.position = startPosition;
+            rectTransform.localPosition = Vector3.zero;
         }
     }
 }

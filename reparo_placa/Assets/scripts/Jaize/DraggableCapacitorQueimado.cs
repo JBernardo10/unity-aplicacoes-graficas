@@ -6,7 +6,7 @@ using TMPro;
 
 public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public TMP_Text mensagemUI; // arraste o Text do Canvas
+    public TMP_Text mensagemUI; // arraste o Text do Canvas 
     public float tempoFerro = 2f;
     public GameObject audioFerroSolda, audioSugadorSolda, audioPinca;
     public float tempoSugador = 2f;
@@ -18,8 +18,21 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
 
     private bool dentro = false;  
     private string ferramentaAtual = "";
+    private string ultimaFerramentaErro = ""; // NOVO: controla erro repetido
     private Coroutine processo = null;
     private Transform pinca;
+
+    public SistemaPontuacao sistemaPontuacao;
+
+     // ⭐ CONTROLE DE PONTUAÇÃO
+    private bool pontoFerro = false;
+    private bool pontoSugador = false;
+    private bool pontoPinca = false;
+
+    static int totFerramenta = 0;
+    private int capacitoresDescartados = 0;
+
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -28,32 +41,78 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
             ferramentaAtual = eventData.pointerDrag.tag;
             dentro = true;
 
-            if (PainelCampoTexto != null)
-                PainelCampoTexto.SetActive(true); // mostra o painel
+            //if (PainelCampoTexto != null)
+              //  PainelCampoTexto.SetActive(true); // mostra o painel
 
             if (estado == Estado.PresoNaPlaca && ferramentaAtual == "FerroSolda")
             {
+                ultimaFerramentaErro = ""; // reseta erro
                 GameObject preFab = Instantiate(audioFerroSolda, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
+
+                if (!pontoFerro && sistemaPontuacao != null){
+                    sistemaPontuacao.AdicionarPontos(20);
+                    pontoFerro = true;
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
+                } 
 
                 processo = StartCoroutine(ProcessarFerramenta("Aquecendo solda...", tempoFerro, Estado.FerroAquecido, "Solda aquecida! Use o sugador."));
 
             }
             else if (estado == Estado.FerroAquecido && ferramentaAtual == "Sugador")
             {
+                ultimaFerramentaErro = ""; // reseta erro
+
                 GameObject preFab = Instantiate(audioSugadorSolda, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
-                Destroy(preFab.gameObject, 2f);
+                Destroy(preFab.gameObject, 2f); 
+
+                if (!pontoSugador && sistemaPontuacao != null) {
+                    sistemaPontuacao.AdicionarPontos(20);
+                    pontoSugador= true;
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                     if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                }
 
                 processo = StartCoroutine(ProcessarFerramenta("Removendo solda...", tempoSugador, Estado.Sugado, "Solda removida! Use a pinça."));
             }
             else if (estado == Estado.Sugado && ferramentaAtual == "Pinca")
             {
+                ultimaFerramentaErro = ""; // reseta erro
+
                 GameObject preFab = Instantiate(audioPinca, new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z), Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
-                if (PainelCampoTexto != null)
-                    PainelCampoTexto.SetActive(true);
+                if (!pontoPinca && sistemaPontuacao != null){
+                    sistemaPontuacao.AdicionarPontos(20);
+                    pontoPinca= true;
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+                
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                }
+
+                //mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
+                //if (PainelCampoTexto != null)
+                    //PainelCampoTexto.SetActive(true);
                 estado = Estado.PresoNaPinca;
                 pinca = eventData.pointerDrag.transform;
                 transform.SetParent(pinca);
@@ -62,9 +121,40 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
             }
             else
             {
-                processo = StartCoroutine(ProcessarFerramenta("Ferramenta errada!", 1f, Estado.PresoNaPlaca, "Utilize o ferro de solda"));
+                // só perde ponto se trocar a ferramenta
+                if (ferramentaAtual != ultimaFerramentaErro)
+                {      
+                if (sistemaPontuacao != null)
+                    sistemaPontuacao.AdicionarPontos(-10);
 
+                pontoFerro = false;
+                pontoSugador = false;
+                pontoPinca = false;
+
+                // Se ainda não descartou nenhum capacitor → reset total
+                if (capacitoresDescartados == 0)
+                {
+                    totFerramenta = 0;
+                }
+                else
+                {
+                    // Se já descartou, apenas reinicia a sequência atual
+                    totFerramenta = capacitoresDescartados * 3; 
+                    // cada capacitor exige 3 ferramentas corretas
+                }
+
+                TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                }
+
+                ultimaFerramentaErro = ferramentaAtual;
             }
+
+            processo = StartCoroutine(ProcessarFerramenta("Ferramenta errada!", 1f, Estado.PresoNaPlaca, "Utilize o ferro de solda"));
+        }
+
         }
     }
 
@@ -77,8 +167,8 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
             processo = null;
         }
 
-        if (PainelCampoTexto != null && estado != Estado.PresoNaPinca)
-            PainelCampoTexto.SetActive(false); // esconde o painel ao sair
+        //if (PainelCampoTexto != null && estado != Estado.PresoNaPinca)
+          //  PainelCampoTexto.SetActive(false); // esconde o painel ao sair
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -100,8 +190,8 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
             }
 
-            if (PainelCampoTexto != null)
-                PainelCampoTexto.SetActive(true);
+           // if (PainelCampoTexto != null)
+               // PainelCampoTexto.SetActive(true);
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -110,8 +200,8 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
         {
             estado = proximo;
             mensagemUI.text = msgDepois;
-            if (PainelCampoTexto != null)
-                PainelCampoTexto.SetActive(true);
+            //if (PainelCampoTexto != null)
+                //PainelCampoTexto.SetActive(true);
         }
     }
 
@@ -119,10 +209,20 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
     {
         if (estado == Estado.PresoNaPinca)
         {
-            mensagemUI.text = "Capacitor removido e descartado!";
-            if (PainelCampoTexto != null)
-                PainelCampoTexto.SetActive(true);
+            //mensagemUI.text = "Capacitor removido e descartado!";
+            //if (PainelCampoTexto != null)
+                //PainelCampoTexto.SetActive(true);
             Destroy(gameObject);
+            capacitoresDescartados+=1;
+            TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarObjetivoConcluido();
+
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+
         }
     }
     

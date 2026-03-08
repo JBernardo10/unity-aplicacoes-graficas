@@ -13,12 +13,20 @@ public class InformacaoVitoria : MonoBehaviour
     public GameObject cone1;
     public GameObject cone2;
     public GameObject cone3;
+    [SerializeField] GameObject botaoProximaFase;
 
     [Header("Som de Comemoração")]
     public AudioSource audioComemoracao; // arraste um AudioSource com o som aqui
 
     private void Start()
     {
+        int numeroFase = PlayerPrefs.GetInt("UltimoFaseConcluida");
+        if (numeroFase == 5)
+        {
+            botaoProximaFase.SetActive(false);
+        }
+
+
         // Recupera o tempo da fase
         float tempo = PlayerPrefs.GetFloat("UltimoTempoFase", 0f);
         textoTempoFinal.text = $"Tempo: {tempo:F0} segundos";
@@ -98,11 +106,31 @@ public class InformacaoVitoria : MonoBehaviour
 
     public void ProximaFase()
     {
-        SceneManager.LoadScene("0.backupMinhaCena_RECUPERADA");
+        string proximaFase = "";
+        int numeroFase = PlayerPrefs.GetInt("UltimoFaseConcluida");
+         switch (numeroFase)
+        {
+            case 1: proximaFase = "0.backupMinhaCena_RECUPERADA"; break;
+            case 2: proximaFase = "ColocarProcessador"; break;
+            case 3: proximaFase = "TutorialCircuitoCarregador"; break;
+            case 4: proximaFase = "DescarteLixo"; break;
+        }
+        SceneManager.LoadScene(proximaFase);
     }
 
     public void Repetir()
     {
-        SceneManager.LoadScene("TutorialReparoPlaca");
+        string repetirFase = "";
+        int numeroFase = PlayerPrefs.GetInt("UltimoFaseConcluida");
+        switch (numeroFase)
+        {
+            case 1: repetirFase = "TutorialReparoPlaca"; break;
+            case 2: repetirFase = "0.backupMinhaCena_RECUPERADA"; break;
+            case 3: repetirFase = "ColocarProcessador"; break;
+            case 4: repetirFase = "TutorialCircuitoCarregador"; break;
+            case 5: repetirFase = "DescarteLixo"; break;
+        }
+
+        SceneManager.LoadScene(repetirFase);
     }
 }

@@ -730,6 +730,7 @@ MonoBehaviour:
   cone1: {fileID: 706476869}
   cone2: {fileID: 352468301}
   cone3: {fileID: 1583005931}
+  botaoProximaFase: {fileID: 803029781}
   audioComemoracao: {fileID: 444396819}
 --- !u!82 &444396819
 AudioSource:

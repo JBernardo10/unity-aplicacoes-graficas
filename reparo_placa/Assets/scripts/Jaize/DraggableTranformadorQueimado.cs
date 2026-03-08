@@ -20,10 +20,12 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
     private Coroutine processo = null;
     private Transform pinca;
 
-       // ⭐ CONTROLE DE PONTUAÇÃO
+    // ⭐ CONTROLE DE PONTUAÇÃO
     private bool pontoFerro = false;
     private bool pontoSugador = false;
     private bool pontoPinca = false;
+
+    //int totFerramenta = 0;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -43,7 +45,16 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                 if (!pontoFerro && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoFerro = true;
+                    //totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+                    
 
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(1);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
                 }   
 
                 processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.FerroAquecido));
@@ -57,12 +68,21 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                 GameObject preFab = Instantiate(audioSugadorSolda, transform.position, Quaternion.identity);
                 Destroy(preFab.gameObject, 2f);
 
-                if (!pontoSugador && sistemaPontuacao != null)
+                if (!pontoSugador && sistemaPontuacao != null) {
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoSugador= true;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+                    
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(2);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
 
                 processo = StartCoroutine(ProcessarFerramenta(tempoSugador, Estado.Sugado));
             }
+            }
+            
 
             // ================= PINÇA =================
             else if (estado == Estado.Sugado && ferramentaAtual == "Pinca")
@@ -75,6 +95,13 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                 if (!pontoPinca && sistemaPontuacao != null)
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoPinca= true;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(3);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
 
                 estado = Estado.PresoNaPinca;
                 pinca = eventData.pointerDrag.transform;
@@ -93,6 +120,15 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                         pontoFerro = false;
                         pontoSugador = false;
                         pontoPinca = false;
+                        //totFerramenta = 0;
+                        TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                        if (controlador != null)
+                        {
+                            controlador.RegistrarFerramentaConcluido(0);
+                            //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                        }
+
 
                     ultimaFerramentaErro = ferramentaAtual;
                 }
@@ -139,6 +175,14 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
         if (estado == Estado.PresoNaPinca)
         {
             Destroy(gameObject);
+            TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarObjetivoConcluido();
+
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
         }
     }
 }

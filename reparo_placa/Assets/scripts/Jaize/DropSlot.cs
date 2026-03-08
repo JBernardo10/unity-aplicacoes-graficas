@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 using System.Collections;
 
 public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
@@ -16,11 +15,6 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     public Image feedbackImage;  // arraste aqui uma UI Image
     public Sprite certoSprite;   // sprite do ✔
     public Sprite erradoSprite;  // sprite do ✖
-    public TMP_Text Textomensagem; // arraste o Text do Canvas
-    [SerializeField] private GameObject ImagemCampoTexto;
-
-    public TMP_Text Textomensagem2; // arraste o Text do Canvas
-    [SerializeField] private GameObject ImagemCampoTexto2;
 
     public float tempoEstanho = 2f;
     public float tempoFerro = 2f;
@@ -33,6 +27,17 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
     private Coroutine processo = null;
     private bool preenchido = false; // controla se já foi usado corretamente
     private bool objetivoRegistrado = false; // evita contar o mesmo capacitor duas vezes
+
+     public SistemaPontuacao sistemaPontuacao;
+
+     // ⭐ CONTROLE DE PONTUAÇÃO
+    private bool pontoFerro = false;
+    private bool pontoEstanho = false;
+    
+
+    static int totFerramenta = 0;
+    private string ultimaFerramentaErro = ""; // NOVO: controla erro repetido
+    public int capacitoresDescartados = 0;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -52,11 +57,20 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             Destroy(preFab.gameObject, 1f);
 
             Debug.Log("✅ Novo capacitor instanciado no slot!");
-            Textomensagem2.text = "Capacitor adicionado corretamente! Agora utilize o estanho.";
-            ImagemCampoTexto2.SetActive(true);
+            if (!preenchido && sistemaPontuacao != null){
+                    sistemaPontuacao.AdicionarPontos(20);
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
-            CancelInvoke(nameof(EsconderCampo));
-            Invoke(nameof(EsconderCampo), 2.5f);
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
+                } 
+                
+
             MostrarFeedback(true);
 
             preenchido = true;
@@ -87,12 +101,6 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             feedbackImage.gameObject.SetActive(false);
     }
 
-    void EsconderCampo()
-    {
-        if (ImagemCampoTexto2 != null)
-            ImagemCampoTexto2.SetActive(false);
-    }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (eventData.pointerDrag == null) return;
@@ -100,32 +108,82 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         dentro = true;
 
         if (estado == Estado.SlotVazio) return;
-        if (ImagemCampoTexto != null)
-            ImagemCampoTexto.SetActive(true);
 
         // Passo 1: aplicar estanho
         if (estado == Estado.CapacitorInserido && ferramentaAtual == "Estanho")
         {
+           ultimaFerramentaErro = ""; // NOVO: controla erro repetido
             GameObject preFab = Instantiate(audioEstanho, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 2f);
+            if (!pontoEstanho && sistemaPontuacao != null){
+                    sistemaPontuacao.AdicionarPontos(20);
+                    pontoEstanho = true;
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
-            processo = StartCoroutine(ProcessarFerramenta(
-                "Aplicando estanho...", tempoEstanho,
-                Estado.EstanhoAplicado,
-                "Agora utilize o ferro de solda."
-            ));
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
+                } 
+
+            processo = StartCoroutine(ProcessarFerramenta(tempoEstanho, Estado.EstanhoAplicado));
         }
         // Passo 2: aplicar ferro de solda
         else if (estado == Estado.EstanhoAplicado && ferramentaAtual == "FerroSolda")
         {
+            ultimaFerramentaErro = ""; // NOVO: controla erro repetido
             GameObject preFab = Instantiate(audioFerroSolda, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 2f);
+            if (!pontoFerro && sistemaPontuacao != null){
+                    sistemaPontuacao.AdicionarPontos(20);
+                    pontoFerro = true;
+                    totFerramenta+=1;
+                    TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
-            processo = StartCoroutine(ProcessarFerramenta(
-                "Soldando capacitor...", tempoFerro,
-                Estado.Soldado,
-                "Capacitor soldado com sucesso na placa mãe!"
-            ));
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
+                } 
+
+            processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.Soldado));
+        }
+        else
+        {
+            // só perde ponto se trocar a ferramenta
+                if (ferramentaAtual != ultimaFerramentaErro)
+                {      
+                if (sistemaPontuacao != null)
+                    sistemaPontuacao.AdicionarPontos(-10);
+
+                pontoFerro = false;
+                pontoEstanho = false;
+                
+                // Se ainda não descartou nenhum capacitor → reset total
+                if (capacitoresDescartados == 0)
+                {
+                    totFerramenta = 0;
+                }
+                else
+                {
+                    // Se já descartou, apenas reinicia a sequência atual
+                    totFerramenta = capacitoresDescartados * 3; 
+                    // cada capacitor exige 3 ferramentas corretas
+                }
+
+                TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                }
+
+                ultimaFerramentaErro = ferramentaAtual;
+            }
         }
     }
 
@@ -137,20 +195,13 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             StopCoroutine(processo);
             processo = null;
         }
-
-        if (ImagemCampoTexto != null)
-            ImagemCampoTexto.SetActive(false);
     }
 
-    private IEnumerator ProcessarFerramenta(string msgDurante, float tempo, Estado proximo, string msgDepois)
+    private IEnumerator ProcessarFerramenta(float tempo, Estado proximo)
     {
         float elapsed = 0f;
         while (elapsed < tempo && dentro)
         {
-            Textomensagem.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
-            if (ImagemCampoTexto != null)
-                ImagemCampoTexto.SetActive(true);
-
             elapsed += Time.deltaTime;
             yield return null;
         }
@@ -158,9 +209,6 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         if (dentro)
         {
             estado = proximo;
-            Textomensagem.text = msgDepois;
-            if (ImagemCampoTexto != null)
-                ImagemCampoTexto.SetActive(true);
 
             // Quando o capacitor for soldado pela primeira vez → registrar objetivo concluído
             if (estado == Estado.Soldado && !objetivoRegistrado)

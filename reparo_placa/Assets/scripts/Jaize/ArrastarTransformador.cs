@@ -64,6 +64,13 @@ public class ArrastarTransformador : MonoBehaviour,
         if (sistemaPontuacao != null)
         {
             sistemaPontuacao.AdicionarPontos(20);
+            TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+            if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(4);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
         }
     }
 
