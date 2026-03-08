@@ -9,7 +9,7 @@ public class DraggableJaize : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Transform startParent;
 
     // Referência ao PanelFerramentas (arraste o objeto no Inspector)
-    public Transform panelFerramentas;
+    public Transform panelFerramentas;  
 
 
     public bool segurado = false;

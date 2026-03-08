@@ -59,12 +59,12 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             Debug.Log("✅ Novo capacitor instanciado no slot!");
             if (!preenchido && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(4);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                    
@@ -118,12 +118,12 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (!pontoEstanho && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoEstanho = true;
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(5);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                    
@@ -140,12 +140,12 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             if (!pontoFerro && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoFerro = true;
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(6);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                    
@@ -179,7 +179,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
                 TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(4);
                 }
 
                 ultimaFerramentaErro = ferramentaAtual;

@@ -18,6 +18,10 @@ public class DraggableCapacitorNovo : MonoBehaviour, IDropHandler, IPointerEnter
     private string ferramentaAtual = "";
     private Coroutine processo = null;
 
+    // 🔥 contador compartilhado
+    static int totFerramenta = 0;
+
+
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null && eventData.pointerDrag.CompareTag("Capacitor"))
@@ -31,6 +35,8 @@ public class DraggableCapacitorNovo : MonoBehaviour, IDropHandler, IPointerEnter
             // Coloca o capacitor como filho do slot
             eventData.pointerDrag.transform.SetParent(transform);
             eventData.pointerDrag.transform.localPosition = Vector3.zero;
+
+            
         }
     }
 
@@ -47,6 +53,7 @@ public class DraggableCapacitorNovo : MonoBehaviour, IDropHandler, IPointerEnter
         // Passo 1: aplicar estanho
         if (estado == Estado.CapacitorInserido && ferramentaAtual == "Estanho")
         {
+            totFerramenta++;
             processo = StartCoroutine(ProcessarFerramenta(
                 "Aplicando estanho...", tempoEstanho,
                 Estado.EstanhoAplicado,

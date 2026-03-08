@@ -53,12 +53,12 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 if (!pontoFerro && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoFerro = true;
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(1);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                    
@@ -77,12 +77,12 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 if (!pontoSugador && sistemaPontuacao != null) {
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoSugador= true;
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
 
                      if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(2);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                 }
@@ -99,13 +99,13 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 if (!pontoPinca && sistemaPontuacao != null){
                     sistemaPontuacao.AdicionarPontos(20);
                     pontoPinca= true;
-                    totFerramenta+=1;
+                    //totFerramenta+=1;
                     TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
                 
 
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(3);
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
                 }
@@ -146,7 +146,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
                 TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
                 if (controlador != null)
                 {
-                    controlador.RegistrarFerramentaConcluido(totFerramenta);
+                    controlador.RegistrarFerramentaConcluido(0);
                 }
 
                 ultimaFerramentaErro = ferramentaAtual;

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class TelaVitoriaJaize : MonoBehaviour
 {
     [SerializeField] string victoryScene = "TelaVitoria";
-    [SerializeField] int totalObjetivos = 2;   // qtd de 
+    [SerializeField] int totalObjetivos = 4;   // qtd de 
     // capacitores/slots a corrigir
     public int totalFerramenta = 6;
     [SerializeField] float delayAntesDeIr = 1.0f;
@@ -21,6 +21,11 @@ public class TelaVitoriaJaize : MonoBehaviour
     {
         // Marca o tempo inicial da fase
         tempoInicio = Time.time;
+
+        // Atualiza o HUD logo no início da fase
+        string Objetivo = string.Format("Objetivos: {0}/{1}", concluido, totalObjetivos);
+        sistemaPontuacao.AtualizaObj(Objetivo);
+
     }
 
      private void Update()
@@ -43,7 +48,8 @@ public class TelaVitoriaJaize : MonoBehaviour
     public void RegistrarObjetivoConcluido()
     {    
         concluido++;
-        string Objetivo = string.Format("Objetivos: {0}/{0}",concluido, totalObjetivos);
+        //string Objetivo = string.Format("Objetivos: {0}/{0}",concluido, totalObjetivos);
+        string Objetivo = string.Format("Objetivos: {0}/{1}", concluido, totalObjetivos);
         sistemaPontuacao.AtualizaObj(Objetivo);
        
         if (concluido >= totalObjetivos)
