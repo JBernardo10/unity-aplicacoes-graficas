@@ -3591,9 +3591,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 346, y: -65}
-  m_SizeDelta: {x: 70, y: 70}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 320, y: -141}
+  m_SizeDelta: {x: 98.1442, y: 141.0065}
+  m_Pivot: {x: 0.40870547, y: 0.32508925}
 --- !u!61 &1051970474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5382099099136627983, guid: e1232b3079180d34d9ffdc04322ddef2, type: 3}
+  m_Sprite: {fileID: -3036346356140019712, guid: 9598ea3a880ae18459acdf69bae84e84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3876,7 +3876,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063075012}
   m_HandleRect: {fileID: 1063075011}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.000000078539486
   m_Size: 0.33756453
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4278,6 +4278,7 @@ MonoBehaviour:
   textoTempo: {fileID: 2045154338}
   textoFerra: {fileID: 157228461}
   textoObj: {fileID: 920745622}
+  totalItensParaDescartar: 5
 --- !u!224 &1258088099
 RectTransform:
   m_ObjectHideFlags: 0

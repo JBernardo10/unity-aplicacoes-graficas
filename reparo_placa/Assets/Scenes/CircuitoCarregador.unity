@@ -173,6 +173,7 @@ MonoBehaviour:
   textoTempo: {fileID: 937887382}
   textoFerra: {fileID: 438603698}
   textoObj: {fileID: 1157295186}
+  totalItensParaDescartar: 5
 --- !u!1 &194264508
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,8 +3627,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1885607143}
   m_HandleRect: {fileID: 1885607142}
   m_Direction: 0
-  m_Value: -0.00000007853947
-  m_Size: 0.3375645
+  m_Value: 0.000000078539486
+  m_Size: 0.33756453
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3707,7 +3708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 329, y: -122}
+  m_AnchoredPosition: {x: 329, y: -121}
   m_SizeDelta: {x: 85.9882, y: 123.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415060714

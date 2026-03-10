@@ -25,7 +25,6 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
     public AudioClip somErro;     // som de erro (opcional)
     private AudioSource audioSource;
 
-
     private void Start()
     {
         // Conta todos os objetos que possuem o script Lixo
@@ -38,7 +37,6 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
 
         // Configura o AudioSource
         audioSource = gameObject.AddComponent<AudioSource>();
-
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -62,10 +60,16 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
             mensagemFeedback.color = Color.green;
             Debug.Log("Acertou! Vidas: " + vidas + " | Acertos: " + acertos);
 
-             // 🔊 Toca som de acerto
+            // 🔊 Toca som de acerto
             if (somAcerto != null)
                 audioSource.PlayOneShot(somAcerto);
 
+            // 👉 Atualiza o HUD de objetivos
+            SistemaPontuacao sistema = FindObjectOfType<SistemaPontuacao>();
+            if (sistema != null)
+            {
+                sistema.RegistrarDescarteCorreto();
+            }
 
             // Verifica se já acertou todos os lixos
             if (acertos == totalLixosNaMesa)
@@ -82,10 +86,9 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
             mensagemFeedback.color = Color.red;
             Debug.Log("Errou! Vidas: " + vidas + " | Erros: " + erros);
 
-            //🔊 Toca som de erro (opcional)
+            // 🔊 Toca som de erro (opcional)
             if (somErro != null)
                 audioSource.PlayOneShot(somErro);
-
         }
 
         // Esconde o painel depois de 2 segundos
