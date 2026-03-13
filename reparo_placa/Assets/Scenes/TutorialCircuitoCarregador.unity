@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &127450622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3489,7 +3489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1707345856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3780,7 +3780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4166,7 +4166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4245,7 +4245,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Ferro de solda: para aquecer os pontos de solda.\n\r\nSugador de solda:
-    para limpar os pontos de solda.\n\r\nPin\xE7a: para retirar o transformador danificado\r\n\n\n\n\n"
+    para limpar os pontos de solda.\n\r\nPin\xE7a: para retirar o transformador danificado.\r\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2542028329161456896, guid: f9daeb9b35018f246ab12edc9e96c86a, type: 3}
+  m_Sprite: {fileID: -3977927292688842029, guid: c83cda9fc266b9a47bd01658e7dd4c49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
