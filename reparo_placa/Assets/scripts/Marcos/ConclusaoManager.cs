@@ -240,7 +240,7 @@ public class ConclusaoManager : MonoBehaviour
     {
         // ✅ SOM ADICIONADO
         TocarSom(somCliqueBotao);
-        SceneManager.LoadScene("ColocarProcessador");
+        SceneManager.LoadScene("TutorialCircuitoCarregador");
         Debug.Log("Proxima Fase clicado");
     }
 
