@@ -45,7 +45,7 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
         if (lixo == null) return;
 
         // Ativa o painel para mostrar a mensagem
-        painelMensagem.SetActive(true);
+        //painelMensagem.SetActive(true);
 
         // Verifica se o lixo tem a mesma tag da lixeira atual
         if (lixo.tag == this.gameObject.tag)

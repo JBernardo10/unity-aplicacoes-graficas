@@ -32,11 +32,11 @@ public class LixeiraCircuitoCarregador : MonoBehaviour, IDropHandler
                 {
                     // Mostra primeiro "Objeto descartado!", depois "Adicione os capacitores bons."
                     StopAllCoroutines();
-                    StartCoroutine(MostrarMensagensSequenciais());
+                    //StartCoroutine(MostrarMensagensSequenciais());
                 }
                 else
                 {
-                    MostrarMensagem("Objeto descartado!");
+                    //MostrarMensagem("Objeto descartado!");
                 }
             }
         }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 12f8d51aa6b62fc4693084be109d0290
+guid: 3b8815eb2a3d89d4bb4968b864bdf7d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4141442221773022580
-    second: ChatGPT_Image_12_de_fev._de_2026__20_07_57-removebg-preview_0
+      213: -5952411965966835742
+    second: CircuitoCarregadorFinal-removebg-preview 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT_Image_12_de_fev._de_2026__20_07_57-removebg-preview_0
+      name: CircuitoCarregadorFinal-removebg-preview 1_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 77
-        width: 321
-        height: 482
+        x: 2
+        y: 3
+        width: 654
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8a1a69dd34a686c0800000000000000
-      internalID: -4141442221773022580
+      spriteID: 2ef13cbaad8c46da0800000000000000
+      internalID: -5952411965966835742
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT_Image_12_de_fev._de_2026__20_07_57-removebg-preview_0: -4141442221773022580
+      CircuitoCarregadorFinal-removebg-preview 1_0: -5952411965966835742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

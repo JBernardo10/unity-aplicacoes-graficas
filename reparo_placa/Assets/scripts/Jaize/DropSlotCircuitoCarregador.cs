@@ -48,6 +48,12 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             GameObject novoTransformador = Instantiate(ImageTranformador, transform);
             novoTransformador.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
+            RectTransform rect = novoTransformador.GetComponent<RectTransform>();
+
+            rect.localScale = Vector3.one;
+            rect.anchoredPosition = Vector2.zero;
+            rect.sizeDelta = new Vector2(120, 120);
+
             GameObject preFab = Instantiate(audioTranformadorCorretoEncaixado, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 1f);
 

@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 8300574c222c1c34ab2b0729bffee48e
+guid: 74a301c90d2a17340a96c9522271f312
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -555444521832028605
-    second: SimbloReciclagem_0
-  - first:
-      213: -2176606440429550122
-    second: SimbloReciclagem_1
-  - first:
-      213: -6819120749552090747
-    second: SimbloReciclagem_2
+      213: -3343350200266602684
+    second: CircuitoCarregadorFinalComTrasformador-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SimbloReciclagem_0
+      name: CircuitoCarregadorFinalComTrasformador-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 26
-        width: 88
-        height: 124
+        x: 27
+        y: 58
+        width: 561
+        height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 346e3c7762aaa48f0800000000000000
-      internalID: -555444521832028605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SimbloReciclagem_1
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 125
-        width: 132
-        height: 95
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d58e5e79f32bc1e0800000000000000
-      internalID: -2176606440429550122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SimbloReciclagem_2
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 14
-        width: 120
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 581c37abecd9d51a0800000000000000
-      internalID: -6819120749552090747
+      spriteID: 447c069e4b80a91d0800000000000000
+      internalID: -3343350200266602684
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SimbloReciclagem_0: -555444521832028605
-      SimbloReciclagem_1: -2176606440429550122
-      SimbloReciclagem_2: -6819120749552090747
+      CircuitoCarregadorFinalComTrasformador-removebg-preview_0: -3343350200266602684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
