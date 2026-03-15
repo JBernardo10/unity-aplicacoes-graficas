@@ -52,7 +52,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
 
             rect.localScale = Vector3.one;
             rect.anchoredPosition = Vector2.zero;
-            rect.sizeDelta = new Vector2(120, 120);
+            rect.sizeDelta = new Vector2(120, 100);
 
             GameObject preFab = Instantiate(audioTranformadorCorretoEncaixado, transform.position, Quaternion.identity);
             Destroy(preFab.gameObject, 1f);
@@ -62,6 +62,17 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
 
             preenchido = true;
             estado = Estado.TranformadorInserido;
+            sistemaPontuacao.AdicionarPontos(20);
+
+            TelaVitoriaJaize controlador = FindObjectOfType<TelaVitoriaJaize>();
+
+                if (controlador != null)
+                {
+                    controlador.RegistrarFerramentaConcluido(4);
+                    //Debug.Log($"🏆 transformador {name} concluído e registrado!");
+                }
+                   
+
         }
         else
         {
