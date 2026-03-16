@@ -54,6 +54,13 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
 
             if (vidas < vidasMaximas)
                 vidas++;
+            DragDescarteLixo scriptLixo = lixo.GetComponent<DragDescarteLixo>();
+
+            if (scriptLixo != null)
+            {
+                scriptLixo.LixoDescartado();
+            }
+
 
             Destroy(lixo);
             mensagemFeedback.text = "Acertou!";
@@ -77,6 +84,8 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
                 todosLixosCorretos = true;
                 Debug.Log("Todos os lixos foram colocados corretamente!");
             }
+
+           
         }
         else
         {
@@ -100,4 +109,5 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
     {
         painelMensagem.SetActive(false);
     }
+   
 }
