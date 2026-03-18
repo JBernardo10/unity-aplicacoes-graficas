@@ -3876,7 +3876,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063075012}
   m_HandleRect: {fileID: 1063075011}
   m_Direction: 0
-  m_Value: 0.000000078539486
+  m_Value: 0
   m_Size: 0.33756453
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4278,7 +4278,7 @@ MonoBehaviour:
   textoTempo: {fileID: 2045154338}
   textoFerra: {fileID: 157228461}
   textoObj: {fileID: 920745622}
-  totalItensParaDescartar: 5
+  totalItensParaDescartar: 4
 --- !u!224 &1258088099
 RectTransform:
   m_ObjectHideFlags: 0

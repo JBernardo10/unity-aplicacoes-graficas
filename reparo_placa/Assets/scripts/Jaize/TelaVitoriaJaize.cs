@@ -19,6 +19,7 @@ public class TelaVitoriaJaize : MonoBehaviour
 
       private void Start()
     {
+        
         // Marca o tempo inicial da fase
         tempoInicio = Time.time;
 
@@ -61,7 +62,7 @@ public class TelaVitoriaJaize : MonoBehaviour
         tempoTotalFase = Time.time - tempoInicio;
         //Debug.Log($"⏱️ Tempo total da fase: {tempoTotalFase:F2} segundos");
 
-        yield return new WaitForSeconds(delayAntesDeIr);
+        yield return new WaitForSeconds(delayAntesDeIr);     
 
         PlayerPrefs.SetFloat("UltimoTempoFase", tempoTotalFase);
         PlayerPrefs.SetInt("UltimoFaseConcluida", numeroFase);

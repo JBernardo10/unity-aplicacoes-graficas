@@ -10,7 +10,7 @@ public class SistemaPontuacao : MonoBehaviour
     public TMP_Text textoTempo, textoFerra, textoObj;
 
     // Controle dos objetivos da fase
-    public int totalItensParaDescartar = 5; // configure no Inspector
+    public int totalItensParaDescartar = 4; // configure no Inspector
     private int itensDescartadosCorretamente = 0;
 
     void Start()

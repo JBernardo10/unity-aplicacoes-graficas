@@ -173,7 +173,7 @@ MonoBehaviour:
   textoTempo: {fileID: 937887382}
   textoFerra: {fileID: 438603698}
   textoObj: {fileID: 1157295186}
-  totalItensParaDescartar: 5
+  totalItensParaDescartar: 1
 --- !u!1 &194264508
 GameObject:
   m_ObjectHideFlags: 0
