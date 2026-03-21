@@ -26,6 +26,6 @@ public class TelaFase : MonoBehaviour
     }
      public void AbrirFase5()
     {
-        SceneManager.LoadScene("DescarteLixo");
+        SceneManager.LoadScene("TutorialDescarteLixo");
     }
 }

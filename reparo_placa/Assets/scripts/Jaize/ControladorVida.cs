@@ -65,4 +65,10 @@ public class ControladorVida : MonoBehaviour
         SceneManager.LoadScene("TelaVitoria");
         Screen.orientation = ScreenOrientation.Portrait;
     }
+    
+     public void Voltar()
+    {
+        SceneManager.LoadScene("TutorialDescarteLixo");
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
 }
