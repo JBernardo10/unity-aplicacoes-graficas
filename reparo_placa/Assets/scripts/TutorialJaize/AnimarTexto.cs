@@ -104,7 +104,7 @@ public class AnimarTexto : MonoBehaviour
         {
             textoBarra.color = new Color(corTextoBarra.r, corTextoBarra.g, corTextoBarra.b, 1);
         }
-
+        //Teste teste = FindObjectOfType<Teste>();
         // 🚀 LIBERA O JOGO
         Teste.jogoIniciado = true;
     }

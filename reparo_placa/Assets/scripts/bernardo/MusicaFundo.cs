@@ -36,7 +36,13 @@ public class MusicaFundo : MonoBehaviour
                     if (audio != null)
                     {
                         float volumeSalvo = PlayerPrefs.GetFloat("VolumeMusica", 1f);
-                        audio.volume = volumeSalvo;
+                        float volumeGeral = PlayerPrefs.GetFloat("VolumeGeral", 1f);
+                        audio.volume =  volumeSalvo * volumeGeral;
+                        int somLigado = PlayerPrefs.GetInt("SomLigado", 1);
+                        if(somLigado == 0)
+                        {
+                            audio.mute = true;
+                        }
                     }
                 }
             }

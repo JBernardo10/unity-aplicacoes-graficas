@@ -29,17 +29,17 @@ public class ConclusaoManager : MonoBehaviour
     private float tempoDecorrido = 0f;
     private bool faseConcluida = false;
     private bool cronometroAtivo = true;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
         // ✅ CONFIGURAÇÃO DE ÁUDIO ADICIONADA
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>();
+            //audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.playOnAwake = false;
-            audioSource.volume = 0.7f;
+            //audioSource.volume = 0.7f;
         }
         
         // CONFIGURA SONS NOS BOTÕES

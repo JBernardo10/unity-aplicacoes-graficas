@@ -27,19 +27,19 @@ public class TutorialManager : MonoBehaviour
     
     private int passoAtual = 0;
     private bool tutorialAtivo = false;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
         Debug.Log("🔧 TUTORIAL MANAGER INICIADO");
         
         // ✅ CONFIGURAÇÃO DE ÁUDIO ADICIONADA
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>();
+            //audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.playOnAwake = false;
-            audioSource.volume = 0.7f;
+            //audioSource.volume = 0.7f;
         }
         
         // CONFIGURA SONS NOS BOTÕES DO TUTORIAL
@@ -80,7 +80,7 @@ public class TutorialManager : MonoBehaviour
     void TocarSom(AudioClip clip)
     {
         if (clip != null && audioSource != null)
-        {
+        {   
             audioSource.PlayOneShot(clip);
         }
     }

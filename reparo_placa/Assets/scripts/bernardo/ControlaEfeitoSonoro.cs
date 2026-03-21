@@ -18,7 +18,7 @@ public class ControlaEfeitoSonoro : MonoBehaviour
     /// </summary>
     public void AtualizarVolume()
     {
-        volumeEfeitos = PlayerPrefs.GetFloat("VolumeEfeitos", 1f);
+        volumeEfeitos = PlayerPrefs.GetFloat("VolumeEfeitos", 0.1f);
         volumeGeral = PlayerPrefs.GetFloat("VolumeGeral", 1f);
 
         float volumeFinal = volumeEfeitos * volumeGeral;

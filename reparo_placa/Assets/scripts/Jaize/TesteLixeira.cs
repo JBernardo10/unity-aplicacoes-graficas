@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 using TMPro;
 
 public class TesteLixeira : MonoBehaviour, IDropHandler
@@ -23,7 +24,7 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
     [Header("Sons")]
     public AudioClip somAcerto;   // som de objeto caindo na lixeira
     public AudioClip somErro;     // som de erro (opcional)
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
         erros = 0;
 
         // Configura o AudioSource
-        audioSource = gameObject.AddComponent<AudioSource>();
+        //audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -68,8 +69,12 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
             Debug.Log("Acertou! Vidas: " + vidas + " | Acertos: " + acertos);
 
             // 🔊 Toca som de acerto
-            if (somAcerto != null)
+            if (somAcerto != null){
+                //audioSource.volume = 0.1f;
                 audioSource.PlayOneShot(somAcerto);
+                //StartCoroutine(EsperarFimDoSom());
+
+            }
 
             // 👉 Atualiza o HUD de objetivos
             SistemaPontuacao sistema = FindObjectOfType<SistemaPontuacao>();
@@ -109,5 +114,17 @@ public class TesteLixeira : MonoBehaviour, IDropHandler
     {
         painelMensagem.SetActive(false);
     }
+
+    private IEnumerator EsperarFimDoSom()
+{
+    // Espera até o som terminar
+    while (audioSource.isPlaying)
+    {
+        yield return null; // espera o próximo frame
+    }
+
+    audioSource.volume = 1f;
+}
+
    
 }

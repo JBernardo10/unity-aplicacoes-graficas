@@ -24,22 +24,22 @@ public class Teste : MonoBehaviour
     }
 
     void Update()
-{
-    if (!jogoIniciado)
-        return;
-
-    if (destino != null)
     {
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            destino.position,
-            velocidade * Time.deltaTime
-        );
+        if (!jogoIniciado)
+            return;
 
-        if (Vector3.Distance(transform.position, destino.position) < 20f)
+        if (destino != null)
         {
-            Destroy(gameObject);
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                destino.position,
+                velocidade * Time.deltaTime
+            );
+
+            if (Vector3.Distance(transform.position, destino.position) < 20f)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-}
 }
