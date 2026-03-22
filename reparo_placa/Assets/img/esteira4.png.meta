@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e978299aefc0f84428f58e1c7dfe05cc
+guid: 074bc3d181889b54980e6f455bdfbb6e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1340566389790693044
-    second: Plano de fundo_0
+      213: 390290061125670298
+    second: esteira4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plano de fundo_0
+      name: esteira4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1536
+        width: 424
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b65d456706aa9210800000000000000
-      internalID: 1340566389790693044
+      spriteID: a95d2c42eb69a6500800000000000000
+      internalID: 390290061125670298
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Plano de fundo_0: 1340566389790693044
+      esteira4_0: 390290061125670298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

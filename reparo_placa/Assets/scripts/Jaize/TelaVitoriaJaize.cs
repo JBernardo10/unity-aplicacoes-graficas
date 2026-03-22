@@ -26,6 +26,8 @@ public class TelaVitoriaJaize : MonoBehaviour
         // Atualiza o HUD logo no início da fase
         string Objetivo = string.Format("Objetivos: {0}/{1}", concluido, totalObjetivos);
         sistemaPontuacao.AtualizaObj(Objetivo);
+        PlayerPrefs.SetInt("UltimoFaseConcluida", numeroFase);
+        PlayerPrefs.Save();
 
     }
 
@@ -66,6 +68,7 @@ public class TelaVitoriaJaize : MonoBehaviour
 
         PlayerPrefs.SetFloat("UltimoTempoFase", tempoTotalFase);
         PlayerPrefs.SetInt("UltimoFaseConcluida", numeroFase);
+        PlayerPrefs.Save();
         
         SceneManager.LoadScene(victoryScene);
         Screen.orientation = ScreenOrientation.Portrait;

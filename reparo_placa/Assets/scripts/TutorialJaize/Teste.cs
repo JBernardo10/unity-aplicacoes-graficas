@@ -10,6 +10,7 @@ public class Teste : MonoBehaviour
 
     void Start()
     {
+        jogoIniciado = false;
         // Procura todas as lixeiras na cena
        LixTutorial[] lixeiras = FindObjectsOfType<LixTutorial>();
 

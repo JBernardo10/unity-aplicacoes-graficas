@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4654043176bb9d942afd83a86d81276b
+guid: dd15e24bb68ee0e4cb2ac1edfe2ccc91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8899708406210765718
-    second: EsteiraCortadaCorreta_0
+      213: -6263022772028434557
+    second: "Lixeira_\xFAnica_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EsteiraCortadaCorreta_0
+      name: "Lixeira_\xFAnica_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 718
-        height: 250
+        x: 8
+        y: 9
+        width: 276
+        height: 469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69320cc84ad128b70800000000000000
-      internalID: 8899708406210765718
+      spriteID: 3871015c8f54519a0800000000000000
+      internalID: -6263022772028434557
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EsteiraCortadaCorreta_0: 8899708406210765718
+      "Lixeira_\xFAnica_0": -6263022772028434557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
