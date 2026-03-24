@@ -6,11 +6,11 @@ using TMPro;
 
 public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public TMP_Text mensagemUI; // arraste o Text do Canvas 
+    //public TMP_Text mensagemUI; // arraste o Text do Canvas 
     public float tempoFerro = 2f;
     public GameObject audioFerroSolda, audioSugadorSolda, audioPinca;
     public float tempoSugador = 2f;
-    [SerializeField] private GameObject PainelCampoTexto;
+    //[SerializeField] private GameObject PainelCampoTexto;
         
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, ProntoParaPinca, PresoNaPinca }
@@ -183,11 +183,11 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
         {
             if (tempo == 1f)
             {
-                mensagemUI.text = msgDurante;
+                //mensagemUI.text = msgDurante;
             }
             else
             {
-                mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
+                //mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
             }
 
            // if (PainelCampoTexto != null)
@@ -199,7 +199,7 @@ public class DraggableCapacitorQueimadoUI : MonoBehaviour, IDropHandler, IPointe
         if (dentro)
         {
             estado = proximo;
-            mensagemUI.text = msgDepois;
+            //mensagemUI.text = msgDepois;
             //if (PainelCampoTexto != null)
                 //PainelCampoTexto.SetActive(true);
         }

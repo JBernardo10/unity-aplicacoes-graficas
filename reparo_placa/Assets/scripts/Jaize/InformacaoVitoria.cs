@@ -29,7 +29,7 @@ public class InformacaoVitoria : MonoBehaviour
 
         // Recupera o tempo da fase
         float tempo = PlayerPrefs.GetFloat("UltimoTempoFase", 0f);
-        textoTempoFinal.text = $"Tempo: {tempo:F0} segundos";
+        textoTempoFinal.text = $"Tempo: {tempo:F0} segundos";//corrigir o modo como o tempo mostra na tela
 
         // Esconde os cones inicialmente
         cone1.SetActive(false);
@@ -113,7 +113,7 @@ public class InformacaoVitoria : MonoBehaviour
             case 1: proximaFase = "0.backupMinhaCena_RECUPERADA"; break;
             case 2: proximaFase = "ColocarProcessador"; break;
             case 3: proximaFase = "TutorialCircuitoCarregador"; break;
-            case 4: proximaFase = "DescarteLixo"; break;
+            case 4: proximaFase = "TutorialDescarteLixo"; break;
         }
         SceneManager.LoadScene(proximaFase);
     }

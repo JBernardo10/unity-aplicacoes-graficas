@@ -42,6 +42,12 @@ public class TelaVitoriaJaize : MonoBehaviour
         // Formata no estilo 00:00
         string cronometro = string.Format("{0:00}:{1:00}", minutos, segundos);
         sistemaPontuacao.AtualizaTempo(cronometro); 
+        if(sistemaPontuacao.pontuacao == 0)
+        {
+            PlayerPrefs.SetFloat("UltimoTempoFase", tempoTotalFase);
+            PlayerPrefs.SetInt("UltimoFaseConcluida", numeroFase);
+            PlayerPrefs.Save();
+        }
 
          //Debug.Log("⏱️ Cronômetro: " + segundos);
     }
