@@ -31,7 +31,7 @@ public class InformacoesDerrota : MonoBehaviour
         }
         // Recupera o tempo salvo da fase
         float tempo = PlayerPrefs.GetFloat("UltimoTempoFase", 0f);
-        textoTempoFinal.text = $"Tempo: {tempo:F0} segundos";
+        textoTempoFinal.text = $"Tempo: {Mathf.FloorToInt(tempo / 60f):00}:{Mathf.FloorToInt(tempo % 60f):00}";
 
         // Se quiser tocar som de vitória
         if (audioComemoracao != null)

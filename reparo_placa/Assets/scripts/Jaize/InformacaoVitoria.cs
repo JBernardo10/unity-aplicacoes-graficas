@@ -29,7 +29,8 @@ public class InformacaoVitoria : MonoBehaviour
 
         // Recupera o tempo da fase
         float tempo = PlayerPrefs.GetFloat("UltimoTempoFase", 0f);
-        textoTempoFinal.text = $"Tempo: {tempo:F0} segundos";//corrigir o modo como o tempo mostra na tela
+        textoTempoFinal.text = $"Tempo: {Mathf.FloorToInt(tempo / 60f):00}:{Mathf.FloorToInt(tempo % 60f):00}";//corrigir o modo como o tempo mostra na tela
+        
 
         // Esconde os cones inicialmente
         cone1.SetActive(false);
@@ -38,10 +39,11 @@ public class InformacaoVitoria : MonoBehaviour
 
         // Calcula quantos cones devem aparecer
         int cones = 1;
-        if (tempo <= 30f)
+        if (tempo <= 60f)
             cones = 3;
-        else if (tempo <= 50f)
+        else if (tempo <= 120f)
             cones = 2;
+        
 
         // Toca o som de comemoração
         if (audioComemoracao != null)
