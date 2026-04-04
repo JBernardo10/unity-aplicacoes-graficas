@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5037523427139544523, guid: f6cc75fbe7f3b244d881fb91d32066b7, type: 3}
+  m_Sprite: {fileID: 2603227707568936011, guid: c5bce3c9ae600d240932f2e4be30f34f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1272,20 +1272,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Institui\xE7\xE3o:\nInstituto Federal de Educa\xE7\xE3o, Ci\xEAncia e
-    Tecnologia Baiano - Campus Senhor do Bonfim.\n\nDisciplina: \nAplica\xE7\xF5es
-    Gr\xE1ficas.\n\nProfessor-orientador:\nJesse Nery.\n\nAlunos-desenvolvedores:\nJaize
-    Ferreira\nJo\xE3o Bernardo\nMarcos Gabriel\nMarcos Vinicius.\n\nO jogo Repara
-    Mania \xE9 um software que foi desenvolvido pelos estudantes citados acima do
-    curso de Licenciatura em Ci\xEAncias da Computa\xE7\xE3o. O objetivo do jogo
-    \xE9 a realiza\xE7\xE3o de reparos de placa ou outros componentes do circuito
-    de forma l\xFAdica e din\xE2mica, o jogo conta com 3 fases, sendo a reparo placa
-    desenvolvida pela estudante Jaize, a fase Processador desenvolvida pelo estudante
-    Marcos Gabriel, e a fase Fusivel desenvolvida pela estudantes Marcos Vinicius.
-    O estudante Jo\xE3o Bernardo ficou respons\xE1vel pelo desenvolvimento das telas
-    de navega\xE7\xE3o e integra\xE7\xE3o das fases de forma fluida, sons de fundo,
-    escolha personagem e demais configura\xE7\xF5es.\n\nCr\xE9ditos dos sprites:
-    \nhttps://www.youtube.com/@DesenvolvedorUnity\n\nCr\xE9ditos dos sons:\nhttps://pixabay.com,
-    https://elevenlabs.io \nhttps://pixabay.com"
+    Tecnologia Baiano - Campus Senhor do Bonfim.\n\nDisciplinas: \nAplica\xE7\xF5es
+    Gr\xE1ficas.\nEst\xE1gio IV.\nJogos eletr\xF4nicos em educa\xE7\xE3o.\n\nProfessor-orientador:\nJesse
+    Nery Filho.\nElane Souza da Silva.\n\nAlunos-desenvolvedores:\nJaize Ferreira.\nJo\xE3o
+    Bernardo.\nMarcos Gabriel.\nMarcos Vinicius.\n\nO jogo foi inicialmente desenvolvido
+    na disciplina de Aplica\xE7\xF5es Gr\xE1ficas, sob orienta\xE7\xE3o do professor
+    Jesse Nery. Posteriormente, teve continuidade na disciplina de Est\xE1gio IV,
+    com a orienta\xE7\xE3o da professora Elane Silva, e foi aprimorado na disciplina
+    de Jogos Eletr\xF4nicos em Educa\xE7\xE3o, novamente com a orienta\xE7\xE3o do
+    professor Jesse Nery\r\n\nCr\xE9ditos dos sprites: \nhttps://www.youtube.com/@DesenvolvedorUnity\n\nCr\xE9ditos
+    dos sons:\nhttps://pixabay.com, https://elevenlabs.io. \nhttps://pixabay.com.\nhttps://www.youtube.com/watch?v=jBsOdep6YqI"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
@@ -1294,8 +1290,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294638335
+  m_fontColor: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

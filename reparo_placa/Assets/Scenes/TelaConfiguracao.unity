@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnSons: {fileID: 1172246190}
   btnControles: {fileID: 89654574}
-  corAtiva: {r: 0, g: 0, b: 1, a: 1}
+  corAtiva: {r: 1, g: 1, b: 1, a: 1}
   corInativa: {r: 1, g: 1, b: 1, a: 1}
   PainelSons: {fileID: 1691906258}
   PainelContls: {fileID: 1482215891}
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f125ebc1b0d034469afaa553ad90d71, type: 3}
+  m_Sprite: {fileID: -4333153484784027620, guid: 216a502e1b95916479182ebf04b71fc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3600,9 +3600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e0e7b25eb36e5428d72a808659505d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: -8507461406701946827, guid: 6c6beb5313e1c7e43841cc59027cd0cf, type: 3}
-  P2: {fileID: 8808989425678874909, guid: 511631a0a371a424597097ab4b98b870, type: 3}
-  P3: {fileID: 2098718065600058734, guid: 85246ee4b5ddc4d44979d0bcbb568fac, type: 3}
+  P1: {fileID: 4323272713085540100, guid: 72087f985b016e048a476eacdbb2ad61, type: 3}
+  P2: {fileID: 5932544767392541003, guid: b73d1ae388de36348976faf7f470eff0, type: 3}
+  P3: {fileID: -946977103270669199, guid: bbc77a5d61bcd9540a98265d6b4dbe8c, type: 3}
   P4: {fileID: 0}
   P5: {fileID: 0}
 --- !u!1 &2096207760
