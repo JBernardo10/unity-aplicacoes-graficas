@@ -481,8 +481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.988994, y: 131.46889}
-  m_SizeDelta: {x: 229.978, y: 85.0623}
+  m_AnchoredPosition: {x: 30.8166, y: 146}
+  m_SizeDelta: {x: 255.6333, y: 53.997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239735912
 MonoBehaviour:
@@ -2562,6 +2562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9008e43fda6c9df489aee278ef19d74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Textomensagem: {fileID: 1532143282}
+  ImageCampoTexto: {fileID: 239735910}
   ImageTranformador: {fileID: 2650759657537727004}
   painelFerramentas: {fileID: 2129592255}
   audioTranformadorCorretoEncaixado: {fileID: 8228710981127615817, guid: d01396e6db7da7a4b8fbf094c3236093, type: 3}
@@ -3613,8 +3615,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1885607143}
   m_HandleRect: {fileID: 1885607142}
   m_Direction: 0
-  m_Value: 0.000000078539486
-  m_Size: 0.33756453
+  m_Value: -0.00000007853947
+  m_Size: 0.3375645
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4087,8 +4089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000021458}
-  m_SizeDelta: {x: 200, y: 85.062}
+  m_AnchoredPosition: {x: 3.2631, y: -1}
+  m_SizeDelta: {x: 249.11, y: 57.6733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532143282
 MonoBehaviour:
@@ -4119,7 +4121,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255386
+    rgba: 4287635664
   m_fontColor: {r: 0.8156863, g: 0.1254902, b: 0.5647059, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4144,7 +4146,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6316,6 +6318,8 @@ MonoBehaviour:
   audioPinca: {fileID: 3433739610097079547, guid: 3d88750612d31234aa1316b49d02d748, type: 3}
   tempoSugador: 2
   sistemaPontuacao: {fileID: 87999627}
+  mensagemUI: {fileID: 1532143282}
+  PainelCampoTexto: {fileID: 239735910}
 --- !u!225 &82398683107298529
 CanvasGroup:
   m_ObjectHideFlags: 0

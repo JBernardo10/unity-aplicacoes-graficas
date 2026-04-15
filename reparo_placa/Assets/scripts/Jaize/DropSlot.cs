@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -18,6 +19,11 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
     public float tempoEstanho = 2f;
     public float tempoFerro = 2f;
+
+    public TMP_Text Textomensagem;
+
+    [SerializeField] GameObject ImageCampoTexto;
+
 
     private enum Estado { SlotVazio, CapacitorInserido, EstanhoAplicado, Soldado }
     private Estado estado = Estado.SlotVazio;
@@ -129,7 +135,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
                    
                 } 
 
-            processo = StartCoroutine(ProcessarFerramenta(tempoEstanho, Estado.EstanhoAplicado));
+            processo = StartCoroutine(ProcessarFerramenta("Aplicando Estanho...", tempoEstanho, Estado.EstanhoAplicado));
         }
         // Passo 2: aplicar ferro de solda
         else if (estado == Estado.EstanhoAplicado && ferramentaAtual == "FerroSolda")
@@ -151,7 +157,7 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
                    
                 } 
 
-            processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.Soldado));
+            processo = StartCoroutine(ProcessarFerramenta("Soldando capacitor...", tempoFerro, Estado.Soldado));
         }
         else
         {
@@ -195,13 +201,19 @@ public class DropSlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
             StopCoroutine(processo);
             processo = null;
         }
+        if (ImageCampoTexto != null)
+            ImageCampoTexto.SetActive(false);
     }
 
-    private IEnumerator ProcessarFerramenta(float tempo, Estado proximo)
+    private IEnumerator ProcessarFerramenta(string msgDurante, float tempo, Estado proximo)
     {
         float elapsed = 0f;
         while (elapsed < tempo && dentro)
         {
+            Textomensagem.text = msgDurante + $"({elapsed:F1}/{tempo:F1}s)";
+            if (ImageCampoTexto != null)
+                ImageCampoTexto.SetActive(true);
+
             elapsed += Time.deltaTime;
             yield return null;
         }

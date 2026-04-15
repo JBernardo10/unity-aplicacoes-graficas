@@ -2,9 +2,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
 public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+
+     public TMP_Text Textomensagem;
+
+    [SerializeField] GameObject ImageCampoTexto;
+
     public GameObject ImageTranformador; 
     public Transform painelFerramentas;    
     public GameObject audioTranformadorCorretoEncaixado;
@@ -130,7 +136,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             if (processo != null)
                 StopCoroutine(processo);
 
-            processo = StartCoroutine(ProcessarFerramenta(
+            processo = StartCoroutine(ProcessarFerramenta("Aplicando Estanho...",
                 tempoEstanho,
                 Estado.EstanhoAplicado
             ));
@@ -158,7 +164,7 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             if (processo != null)
                 StopCoroutine(processo);
 
-            processo = StartCoroutine(ProcessarFerramenta(
+            processo = StartCoroutine(ProcessarFerramenta("Soldando trasformador...",
                 tempoFerro,
                 Estado.Soldado
             ));
@@ -188,14 +194,19 @@ public class DropSlotCircuitoCarregador : MonoBehaviour, IDropHandler, IPointerE
             StopCoroutine(processo);
             processo = null;
         }
+        if (ImageCampoTexto != null)
+            ImageCampoTexto.SetActive(false);
     }
 
-    private IEnumerator ProcessarFerramenta(float tempo, Estado proximo)
+    private IEnumerator ProcessarFerramenta(string msgDurante, float tempo, Estado proximo)
     {
         float elapsed = 0f;
 
         while (elapsed < tempo && dentro)
         {
+             Textomensagem.text = msgDurante + $"({elapsed:F1}/{tempo:F1}s)";
+            if (ImageCampoTexto != null)
+                ImageCampoTexto.SetActive(true);
             elapsed += Time.deltaTime;
             yield return null;
         }

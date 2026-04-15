@@ -1098,8 +1098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -405, y: -139}
-  m_SizeDelta: {x: 40, y: 100}
+  m_AnchoredPosition: {x: -388, y: -54}
+  m_SizeDelta: {x: 30, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540110980
 MonoBehaviour:
@@ -1605,8 +1605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406, y: -16}
-  m_SizeDelta: {x: 40, y: 100}
+  m_AnchoredPosition: {x: -391, y: 37}
+  m_SizeDelta: {x: 30, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669824213
 MonoBehaviour:
@@ -1955,7 +1955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2713, y: 0.000015259}
+  m_AnchoredPosition: {x: 2.2713, y: 44}
   m_SizeDelta: {x: 752.54, y: 514.6288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865482449
@@ -1980,7 +1980,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "1- Identifique o transformador queimado na plaquinha do circuito do carregador
     de celular.\r\n2- Remova-o utilizando as ferramentas corretas que est\xE3o dispon\xEDveis
-    no painel de ferramentas e descarte-o na lixeira:\r\n"
+    no painel de ferramentas e descarte-o na lixeira: \nObserva\xE7\xE3o: Para usar
+    as ferramentas, arraste-as do painel at\xE9 o objeto na placa e mantenha-as pressionadas
+    sobre o objeto para realizar o processo.\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
@@ -2367,8 +2369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -523}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 172.5424, y: -540}
+  m_SizeDelta: {x: 302.9153, y: 307.2271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081908237
 MonoBehaviour:
@@ -3624,8 +3626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406, y: 105}
-  m_SizeDelta: {x: 50, y: 80}
+  m_AnchoredPosition: {x: -393, y: 120}
+  m_SizeDelta: {x: 30, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1833293581
 MonoBehaviour:
@@ -4221,7 +4223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: -191}
+  m_AnchoredPosition: {x: 71, y: -273}
   m_SizeDelta: {x: 705, y: 308.9111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086498677
@@ -4244,8 +4246,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ferro de solda: para aquecer os pontos de solda.\n\r\nSugador de solda:
-    para limpar os pontos de solda.\n\r\nPin\xE7a: para retirar o transformador danificado.\r\n\n\n\n\n"
+  m_text: "Ferro de solda: para aquecer os pontos de solda.\n\rSugador de solda:
+    para limpar os pontos de solda.\n\rPin\xE7a: para retirar o transformador danificado.\r\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}
   m_sharedMaterial: {fileID: 1270287484492294991, guid: 7c9c6ea4c6d73d74d8999437d3a4cea4, type: 2}

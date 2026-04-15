@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
 public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -9,6 +11,9 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
     public float tempoSugador = 2f;
 
     public SistemaPontuacao sistemaPontuacao;
+
+    public TMP_Text mensagemUI; // arraste o Text do Canvas 
+    [SerializeField] GameObject PainelCampoTexto;
     
 
     private enum Estado { PresoNaPlaca, FerroAquecido, Sugado, PresoNaPinca }
@@ -57,7 +62,7 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                    
                 }   
 
-                processo = StartCoroutine(ProcessarFerramenta(tempoFerro, Estado.FerroAquecido));
+                processo = StartCoroutine(ProcessarFerramenta("Aquecendo solda...", tempoFerro, Estado.FerroAquecido));
             }
 
             // ================= SUGADOR =================
@@ -79,7 +84,7 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
 
-                processo = StartCoroutine(ProcessarFerramenta(tempoSugador, Estado.Sugado));
+                processo = StartCoroutine(ProcessarFerramenta("Removendo solda...", tempoSugador, Estado.Sugado));
             }
             }
             
@@ -103,6 +108,9 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
 
+                mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
+                if (PainelCampoTexto != null)
+                    PainelCampoTexto.SetActive(true);
                 estado = Estado.PresoNaPinca;
                 pinca = eventData.pointerDrag.transform;
                 transform.SetParent(pinca);
@@ -133,7 +141,7 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                     ultimaFerramentaErro = ferramentaAtual;
                 }
 
-                processo = StartCoroutine(ProcessarFerramenta(1f, Estado.PresoNaPlaca));
+                processo = StartCoroutine(ProcessarFerramenta("Ferramenta errada!", 1f, Estado.PresoNaPlaca));
             }
         }
     }
@@ -147,6 +155,8 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
             StopCoroutine(processo);
             processo = null;
         }
+        if (PainelCampoTexto != null && estado != Estado.PresoNaPinca)
+            PainelCampoTexto.SetActive(false); // esconde o painel ao sair
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -154,12 +164,15 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
         // opcional
     }
 
-    private IEnumerator ProcessarFerramenta(float tempo, Estado proximo)
+    private IEnumerator ProcessarFerramenta(string msgDurante, float tempo, Estado proximo)
     {
         float elapsed = 0f;
 
         while (elapsed < tempo && dentro)
         {
+            mensagemUI.text = msgDurante + $" ({elapsed:F1}/{tempo:F1}s)";
+            if (PainelCampoTexto != null)
+                PainelCampoTexto.SetActive(true);
             elapsed += Time.deltaTime;
             yield return null;
         }
