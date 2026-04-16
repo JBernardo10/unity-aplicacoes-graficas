@@ -113,9 +113,9 @@ public class InformacaoVitoria : MonoBehaviour
          switch (numeroFase)
         {
             case 1: proximaFase = "0.backupMinhaCena_RECUPERADA"; break;
-            case 2: proximaFase = "ColocarProcessador"; break;
+            case 2: proximaFase = "TutorialDescarteLixo"; break;
             case 3: proximaFase = "TutorialCircuitoCarregador"; break;
-            case 4: proximaFase = "TutorialDescarteLixo"; break;
+            case 4: proximaFase = "TutorialReparoPlaca"; break;
         }
         SceneManager.LoadScene(proximaFase);
     }

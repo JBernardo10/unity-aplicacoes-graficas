@@ -2658,7 +2658,7 @@ MonoBehaviour:
   totalObjetivos: 5
   totalFerramenta: 0
   delayAntesDeIr: 1
-  numeroFase: 5
+  numeroFase: 3
   tempoTotalFase: 0
   sistemaPontuacao: {fileID: 1151091563}
 --- !u!224 &1012506183

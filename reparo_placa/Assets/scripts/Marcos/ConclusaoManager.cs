@@ -16,6 +16,7 @@ public class ConclusaoManager : MonoBehaviour
     public Button botaoProximaFase;
     public Button botaoRepetir;
     public Button botaoMenu;
+    public int numeroFase;
 
     [Header("Configurações")]
     public float tempoParaConcluir = 60f;
@@ -240,7 +241,15 @@ public class ConclusaoManager : MonoBehaviour
     {
         // ✅ SOM ADICIONADO
         TocarSom(somCliqueBotao);
-        SceneManager.LoadScene("TutorialCircuitoCarregador");
+        if(numeroFase == 1)
+        {
+            SceneManager.LoadScene("0.backupMinhaCena_RECUPERADA");
+        }
+        else if(numeroFase == 2)
+        {
+            SceneManager.LoadScene("TutorialDescarteLixo");
+        }
+       
         Debug.Log("Proxima Fase clicado");
     }
 

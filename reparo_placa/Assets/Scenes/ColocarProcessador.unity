@@ -1866,6 +1866,7 @@ MonoBehaviour:
   botaoProximaFase: {fileID: 686860155}
   botaoRepetir: {fileID: 447740633}
   botaoMenu: {fileID: 2068476885}
+  numeroFase: 1
   tempoParaConcluir: 60
   somConclusao: {fileID: 8300000, guid: 376a0a8dbeabc4d4a9a995d8b201211e, type: 3}
   somEstrela: {fileID: 8300000, guid: 07d530ae14f10934d814206aed5aea4c, type: 3}

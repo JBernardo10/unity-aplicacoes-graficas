@@ -108,7 +108,7 @@ public class DraggableTranformadorQueimado : MonoBehaviour, IDropHandler, IPoint
                     //Debug.Log($"🏆 transformador {name} concluído e registrado!");
                 }
 
-                mensagemUI.text = "Capacitor preso na pinça! Leve até a lixeira.";
+                mensagemUI.text = "Trasformador preso na pinça! Leve até a lixeira.";
                 if (PainelCampoTexto != null)
                     PainelCampoTexto.SetActive(true);
                 estado = Estado.PresoNaPinca;
