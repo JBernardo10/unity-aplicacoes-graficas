@@ -20,6 +20,7 @@ TagManager:
   - Eletronico
   - Organico
   - FimEsteira
+  - Placa Mae
   layers:
   - Default
   - TransparentFX

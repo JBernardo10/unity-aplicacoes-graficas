@@ -127,11 +127,11 @@ public class InformacaoVitoria : MonoBehaviour
         Debug.Log(numeroFase);
         switch (numeroFase)
         {
-            case 1: repetirFase = "TutorialReparoPlaca"; break;
+            case 1: repetirFase = "ColocarProcessador"; break;
             case 2: repetirFase = "0.backupMinhaCena_RECUPERADA"; break;
-            case 3: repetirFase = "ColocarProcessador"; break;
+            case 3: repetirFase = "TutorialDescarteLixo"; break;
             case 4: repetirFase = "TutorialCircuitoCarregador"; break;
-            case 5: repetirFase = "TutorialDescarteLixo"; break;
+            case 5: repetirFase = "TutorialReparoPlaca"; break;
         }
 
         SceneManager.LoadScene(repetirFase);
